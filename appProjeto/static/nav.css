@@ -1,0 +1,76 @@
+nav {
+    width: 100%;
+}
+
+.navBox { 
+    width: 100%;
+    justify-content: space-between; 
+}
+
+.navBox button {
+    background: unset; 
+    border: unset;
+    font-family: 'Karla';
+}
+
+.navLeft { 
+    height: 100%;
+}
+
+.navLeft button { 
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
+
+.navBoxLogo { 
+    margin-right: 40px; 
+}
+
+.navLeft img {
+    width: 100px; 
+}
+
+.logoText {
+    margin-left: 10px; 
+    font-size: 2rem; 
+    font-weight: bolder; 
+}
+
+.logoText span { 
+    color: #FF6600; 
+}
+
+.navButton { 
+    transition: border-bottom 0.4s; 
+    margin-right: 20px;
+}
+
+.navButton:hover { 
+    border-bottom: 2px solid #FF6600; 
+}
+
+.navRight button{ 
+    color: white; 
+    font-family: 'Karla';
+    font-size: 1.2rem; 
+    font-weight: bolder; 
+    outline: none; 
+}
+
+.navRight .boxCadastro { 
+    background-color: #FF6600; 
+    border-radius: 10px; 
+    width: 140px; 
+    height: 60px;
+    margin-left: 40px;
+}
+
+.navRight .login:hover {
+    color: #FF6600; 
+}
+
+.navRight .boxCadastro:hover {
+    cursor: pointer;
+    background-color: rgb(253, 121, 32);
+}

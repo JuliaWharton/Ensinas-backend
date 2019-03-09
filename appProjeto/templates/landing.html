@@ -1,0 +1,57 @@
+{%extends 'template.html'%} 
+
+{%load static %}
+
+{%block content%}
+<head>
+    <title>CHUPEME</title>
+    <link rel="stylesheet" href="{%static 'nav.css'%}">
+    <link rel="stylesheet" href="{%static 'landing.css'%}">
+</head>
+<div class="main">
+    <div class="mainShadow">
+
+        <nav>
+            {%include 'nav.html'%}
+        </nav>
+
+        <div class="mainInside flex">
+
+            <h1>DESCUBRA NOVOS HORIZONTES</h1>
+            <h4>Seu estudo, Seu tempo</h4>
+
+            <select class="custom-select select">
+                <option selected>Encontre sua Matéria</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+
+            <div class="boxMaterias flex">
+
+                <div class="materiasSection flex">
+
+                    <div class="materiasButton flex">
+                        <img src="{%static 'img/design-tool.png'%}" alt="">
+                        <p> Matemática </p>
+                    </div>
+                    <div class="materiasButton flex">
+                        <img src="{%static 'img/design-tool.png'%}" alt="">
+                        <p> Matemática </p>
+                    </div>
+                    <div class="materiasButton flex">
+                        <img src="{%static 'img/design-tool.png'%}" alt="">
+                        <p> Matemática </p>
+                    </div>
+
+                </div>
+
+            </div>
+                    
+        </div>
+
+    </div>
+</div>
+
+
+{%endblock%}
