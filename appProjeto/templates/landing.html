@@ -6,29 +6,23 @@
 <head>
     <title>CHUPEME</title>
     <link rel="stylesheet" href="{%static 'nav.css'%}">
-    <link rel="stylesheet" href="{%static 'landing.css'%}">
+    <link rel="stylesheet" href="{%static 'footer.css'%}">
+    <link rel="stylesheet" href="{%static 'landing.css'%}"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 </head>
 <div class="main">
     <div class="mainShadow">
-
         <nav>
             {%include 'nav.html'%}
         </nav>
-
         <div class="mainInside flex">
-
             <h1>DESCUBRA NOVOS HORIZONTES</h1>
             <h4>Seu estudo, Seu tempo</h4>
-
-            <select class="custom-select select">
-                <option selected>Encontre sua Matéria</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-
+            <div class="mainInsideSearch flex">
+                <input type="text" name="search" placeholder="Pesquisar">
+                <button class="searchButton flex"><img src="{%static 'img/loupe.png'%}" alt=""></button>
+            </div>
             <div class="boxMaterias flex">
-
                 <div class="materiasSection flex">
 
                     <div class="materiasButton flex">
@@ -36,22 +30,44 @@
                         <p> Matemática </p>
                     </div>
                     <div class="materiasButton flex">
-                        <img src="{%static 'img/design-tool.png'%}" alt="">
-                        <p> Matemática </p>
+                        <img src="{%static 'img/dna.png'%}" alt="">
+                        <p> Biologia </p>
                     </div>
                     <div class="materiasButton flex">
-                        <img src="{%static 'img/design-tool.png'%}" alt="">
-                        <p> Matemática </p>
+                        <img src="{%static 'img/openbook.png'%}" alt="">
+                        <p> Português </p>
                     </div>
-
                 </div>
-
-            </div>
-                    
+                <div class="materiasSection flex">
+                    <div class="materiasButton flex">
+                        <img src="{%static 'img/startup.png'%}" alt="">
+                        <p> Física </p>
+                    </div>
+                    <div class="materiasButton flex">
+                        <img src="{%static 'img/data.png'%}" alt="">
+                        <p> Programacão </p>
+                    </div>
+                    <div class="materiasButton flex">
+                        <img src="{%static 'img/united-kingdom.png'%}" alt="">
+                        <p> Inglês </p>
+                    </div>
+                </div>
+            </div>          
         </div>
-
     </div>
 </div>
+
+<div class="sectionOne">
+
+</div>
+
+<div class="sectionTwo">
+
+</div>
+
+<footer class="">
+    {%include 'footer.html'%}
+</footer>
 
 
 {%endblock%}

@@ -1,0 +1,54 @@
+footer {
+    font-family: 'Karla', 'sans-serif';
+}
+
+footer img {
+    width: 15px; 
+}
+
+.footerLine {
+    background-color: rgb(10, 10, 10);  
+    height: 25px; 
+}
+
+.footerDados {
+    justify-content: space-between; 
+    background: rgb(3, 3, 3);
+    font-weight: bolder; 
+    color: white; 
+    height: 80px;
+    padding: 0px 60px 0px 90px 
+}
+
+.footerDados p{ 
+    font-size: 1rem;
+    margin: 0;
+    margin-right: 30px; 
+}
+
+.footerDados p i {
+    margin-right: 5px; 
+}
+
+.footerDados .footerLogo p { 
+    font-size: 1.7rem; 
+}
+
+.footerDados span {
+    color: #FF6600; 
+}
+
+.footerSocial {
+    height: 50px; 
+    background-color: #000;
+}
+
+.footerSocial p {
+    color: white; 
+    font-weight: bold; 
+    margin: 0; 
+}
+
+.footerSocial span {
+    color: #FF6600; 
+}
