@@ -1,11 +1,10 @@
-.maxW { 
+.maxW {
     max-width: 1366px;
-    width: 100%; 
+    width: 100%;
 }
 
-.flex { 
-    display: flex; 
-    justify-content: center; 
+.flex {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-

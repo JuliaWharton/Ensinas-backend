@@ -2,73 +2,74 @@ nav {
     width: 100%;
 }
 
-.navBox { 
+.navBox {
     width: 100%;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .navBox button {
-    background: unset; 
+    background: unset;
     border: unset;
     font-family: 'Karla';
 }
 
-.navLeft { 
+.navLeft {
     height: 100%;
 }
 
-.navLeft button { 
+.navLeft button {
     color: white;
     font-weight: bold;
     outline: none;
 }
 
-.navBoxLogo { 
-    margin-right: 40px; 
+.navBoxLogo {
+    margin-right: 40px;
 }
 
 .navLeft img {
-    width: 100px; 
+    width: 100px;
 }
 
 .logoText {
-    margin-left: 10px; 
-    font-size: 2rem; 
-    font-weight: bolder; 
+    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: bolder;
 }
 
-.logoText span { 
-    color: #FF6600; 
+.logoText span {
+    color: #FF6600;
 }
 
-.navButton { 
-    transition: box-shadow 0.2s; 
-    transform-origin: left; 
+.navButton {
+    transition: box-shadow 0.2s;
+    transform-origin: left;
     margin-right: 20px;
+    text-transform: uppercase;
 }
 
-.navButton:hover { 
-    box-shadow: 0px 4px 0px -2px #FF6600; 
+.navButton:hover {
+    box-shadow: 0px 4px 0px -2px #FF6600;
 }
 
-.navRight button{ 
-    color: white; 
+.navRight button {
+    color: white;
     font-family: 'Karla';
-    font-size: 1.2rem; 
-    font-weight: bolder; 
-    outline: none; 
+    font-size: 1.2rem;
+    font-weight: bolder;
+    outline: none;
 }
 
-.navRight .boxCadastro { 
-    background-color: #FF6600; 
-    border-radius: 10px; 
-    width: 140px; 
+.navRight .boxCadastro {
+    background-color: #FF6600;
+    border-radius: 10px;
     height: 40px;
     margin-left: 40px;
+    padding: 0 15px;
 }
 
 .navRight .login:hover {
-    color: #FF6600; 
+    color: #FF6600;
 }
 
 .navRight .boxCadastro:hover {
