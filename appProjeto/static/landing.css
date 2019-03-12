@@ -12,6 +12,7 @@
 
 nav { 
     height: 120px;
+    padding: 0px 20px;
 }
 
 .mainInside { 
@@ -98,12 +99,76 @@ nav {
     color: white; 
 }
 
+.sectionOneBox {
+    width: 100%; 
+}
+
 .sectionOne {
     background-color: white; 
     height: 300px; 
+    justify-content: space-around; 
+}
+
+.sectionOneIcons {
+    font-size: 3rem; 
+    flex-direction: column; 
+}
+
+
+.sectionOne .icons:hover {
+    cursor: pointer; 
+    background-color: #FF6600; 
+}
+ 
+.sectionOneIcons .icons:hover {
+    color: white;
+}
+
+.sectionOneIcons .icons {
+    width: 100px; 
+    height: 100px;
+    transition: all 0.3s; 
+    border-radius: 100px;
+    background: lightgray; 
+    margin-bottom: 5px;
+}
+
+.sectionOneIcons h3 {
+    margin-top: 5px;
+    font-size: 1.6rem; 
+    font-weight: bolder;
+}
+
+.sectionOneIcons p {
+    font-size: 1.1rem;
+}
+
+.sectionTwoBox {
+    font-family: 'Karla', 'sans-serif'
 }
 
 .sectionTwo {
     background-color: lightgray ; 
     height: 300px; 
+}
+
+.sectionTwoAll {
+    padding-top: 20px;
+}
+
+.sectionTwo h1 {
+    font-weight: bold;
+    padding-top: 100px;
+    font-size: 3.2rem; 
+    padding: 20px 0px 0px 30px;
+}
+
+.sectionTwoText p {
+    font-size: 1.4rem;
+    margin-top: 20px; 
+    width: 80%; 
+}
+
+.sectionThree {
+    background-color: white;
 }
