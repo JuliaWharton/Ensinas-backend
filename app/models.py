@@ -17,7 +17,7 @@ class Aluno(models.Model):
     senha = models.CharField(max_length=256)
 
     def __str__(self):
-        return self.email
+        return f'{self.nome} ({self.email})'
 
 class Professor(models.Model):
     nome = models.CharField(max_length=256)
@@ -30,7 +30,7 @@ class Professor(models.Model):
     alunos = models.ManyToManyField(Aluno, through='Contato')
 
     def __str__(self):
-        return self.email
+        return f'{self.nome} ({self.email})'
 
     class Meta:
         verbose_name_plural = "Professores"
@@ -40,5 +40,5 @@ class Contato(models.Model):
     aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
     oculto = models.BooleanField(default=False)
 
-    #def __str__(self):
-     #   return f'{self.aluno} - {self.professor}'
+    def __str__(self):
+        return f'{self.aluno} - {self.professor}'

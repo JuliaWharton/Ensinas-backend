@@ -1,8 +1,18 @@
 {% extends 'template.html' %}
 {% load staticfiles %}
 
+{%block head %}
+<link defer rel="stylesheet" href="{% static 'style/nav.css' %}">
+<link defer rel="stylesheet" href="{% static 'style/footer.css' %}">
+<link defer rel="stylesheet" href="{% static 'style/landing.css' %}">
+<link defer rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+crossorigin="anonymous">
+
+<title>Ensinas - Estudantes, ajudando estudantes.</title>
+{%endblock %}
+
 {% block content %}
-    
+
 <div class="main">
     <div class="mainShadow">
         <nav class="flex">
@@ -14,7 +24,7 @@
             <h4>Seu estudo, Seu tempo</h4>
             <div class="boxMaterias flex">
                 <div class="materiasSection flex">
-
+                    
                     <div class="materiasButton flex">
                         <img src="{%static 'img/matematica.png'%}" alt="">
                         <p> Matemática </p>
@@ -77,45 +87,45 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, error laboriosam natus sit
                         consectetur ipsam modi dolore exercitationem hic est temporibus, veritatis saepe. Sapiente
                         tenetur aliquid molestias eaque voluptate id!</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<div class="sectionTwo flex">
-    <div class="maxW">
-        <div class="sectionTwo sectionThree">
-            <div class="sectionTwoAll">
-                <h1>Sobre nós</h1>
-                <div class="sectionTwoText flex">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, error laboriosam natus sit
-                        consectetur ipsam modi dolore exercitationem hic est temporibus, veritatis saepe. Sapiente
-                        tenetur aliquid molestias eaque voluptate id!</p>
+    
+    <div class="sectionTwo flex">
+        <div class="maxW">
+            <div class="sectionTwo sectionThree">
+                <div class="sectionTwoAll">
+                    <h1>Sobre nós</h1>
+                    <div class="sectionTwoText flex">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, error laboriosam natus sit
+                            consectetur ipsam modi dolore exercitationem hic est temporibus, veritatis saepe. Sapiente
+                            tenetur aliquid molestias eaque voluptate id!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="sectiontwo flex">
-    <div class="maxW">
-        <div class="sectionTwo sectionFour">
-            <div class="sectionTwoAll">
-                <h1>Sobre nós</h1>
-                <div class="sectionTwoText flex">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, error laboriosam natus sit
-                        consectetur ipsam modi dolore exercitationem hic est temporibus, veritatis saepe. Sapiente
-                        tenetur aliquid molestias eaque voluptate id!</p>
+        
+        <div class="sectiontwo flex">
+            <div class="maxW">
+                <div class="sectionTwo sectionFour">
+                    <div class="sectionTwoAll">
+                        <h1>Sobre nós</h1>
+                        <div class="sectionTwoText flex">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, error laboriosam natus sit
+                                consectetur ipsam modi dolore exercitationem hic est temporibus, veritatis saepe. Sapiente
+                                tenetur aliquid molestias eaque voluptate id!</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<footer class="">
-    {% include 'footer.html' %}
-</footer>
-
-
-{%endblock%}
+            
+            <footer class="">
+                {% include 'footer.html' %}
+            </footer>
+            
+            
+            {%endblock%}

@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
-def login(request):
-    return render(request, 'login.html')
+def auth_cadastro(request):
+    return render(request, 'auth_cadastro.html')
 
-def cadastro(request):
-    return render(request, 'cadastro.html')
+def auth_login(request):
+    return render(request, 'auth_login.html')
 
-def app_aluno(request):
-    return render(request, 'app_aluno.html')
+def aluno_home(request):
+    return render(request, 'aluno_home.html')
 
-def app_professor(request):
-    return render(request, 'app_professor.html')
+def professor_home(request):
+    return render(request, 'professor_home.html')

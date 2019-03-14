@@ -1,31 +1,36 @@
 
 {% load staticfiles %}
 
-    <div class="navBox maxW flex ">
-
-        <div class="navLeft flex">
-
-            <div class="navBoxLogo flex">
-                <img src="{%static 'img/logo.png'%}" alt="">
-                <button class="logoText">Ensi<span>nas</span></button>
-            </div>
-
-            <div class="navBoxButton flex">
-
-                <button class="navButton">Sobre Nós</button>
-                <button class="navButton">Contato</button>
-                <button class="navButton">Professores</button>
-
-            </div>
-
+<div class="navBox maxW flex ">
+    
+    <div class="navLeft flex">
+        
+        <div class="navBoxLogo flex">
+            <img src="{%static 'img/logo.png'%}" alt="">
+            <button class="logoText">Ensi<span>nas</span></button>
         </div>
-
-        <div class="navRight flex">
-
-            <button class="login">Login</button>
-            <a href="{% url 'cadastro' %}"><div class="boxCadastro flex"><button class="cadastro">Cadastrar-se</button></div></a>
-
+        
+        <div class="navBoxButton flex">
+            
+            <button class="navButton">Sobre Nós</button>
+            <button class="navButton">Contato</button>
+            <button class="navButton">Professores</button>
+            
         </div>
-
+        
     </div>
-
+    
+    <div class="navRight flex">
+        
+        <a href="{% url 'app_auth_login' %}">
+            <button class="login">Login</button>
+        </a>        
+        <a href="{% url 'app_auth_cadastro' %}">
+            <div class="boxCadastro flex">
+                <button class="cadastro">Cadastre-se</button>
+            </div>
+        </a>
+        
+    </div>
+    
+</div>
