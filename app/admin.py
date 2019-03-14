@@ -6,19 +6,19 @@ from app.models import Aluno, Contato, Materia, Professor
 class MateriaAdmin(admin.ModelAdmin):
     list_display = ('nome',)
     ordering = ('nome',)
-    search_fields = ['nome']
+    search_fields = ('nome',)
 
 @admin.register(Aluno)
 class AlunoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'email')
     ordering = ('nome',)
-    search_fields = ['nome', 'email']
+    search_fields = ('nome', 'email')
 
 @admin.register(Professor)
 class ProfessorAdmin(admin.ModelAdmin):
     list_display = ('nome', 'email', 'aprovado', 'instituicao', 'curso')
     ordering = ('nome', 'email')
-    search_fields = ['nome', 'email', 'instituicao', 'curso']
+    search_fields = ('nome', 'email', 'instituicao', 'curso')
 
 @admin.register(Contato)
 class ContatoAdmin(admin.ModelAdmin):
