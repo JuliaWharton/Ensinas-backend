@@ -1,6 +1,5 @@
-{%load static%}
 
-<nav class="flex">
+{% load staticfiles %}
 
     <div class="navBox maxW flex ">
 
@@ -24,10 +23,9 @@
         <div class="navRight flex">
 
             <button class="login">Login</button>
-            <div class="boxCadastro flex"><button class="cadastro">Cadastrar-se</button></div>
+            <a href="{% url 'cadastro' %}"><div class="boxCadastro flex"><button class="cadastro">Cadastrar-se</button></div></a>
 
         </div>
 
     </div>
 
-</nav>
