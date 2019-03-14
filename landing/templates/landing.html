@@ -1,23 +1,14 @@
-{%extends 'template.html'%}
+{% extends 'template.html' %}
+{% load staticfiles %}
 
-{%load static %}
-
-{%block content%}
-
-<head>
-    <link rel="stylesheet" href="{%static 'style/nav.css'%}">
-    <link rel="stylesheet" href="{%static 'style/footer.css'%}">
-    <link rel="stylesheet" href="{%static 'style/landing.css'%}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
-
-    <title>Ensinas - Estudantes, ajudando estudantes.</title>
-</head>
+{% block content %}
+    
 <div class="main">
     <div class="mainShadow">
-        <nav>
-            {%include 'nav.html'%}
+        <nav class="flex">
+            {% include 'nav.html' %}
         </nav>
+        
         <div class="mainInside flex">
             <h1>DESCUBRA NOVOS HORIZONTES</h1>
             <h4>Seu estudo, Seu tempo</h4>
@@ -123,7 +114,7 @@
 </div>
 
 <footer class="">
-    {%include 'footer.html'%}
+    {% include 'footer.html' %}
 </footer>
 
 

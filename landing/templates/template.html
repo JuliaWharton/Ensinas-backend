@@ -1,4 +1,5 @@
-{%load static%}
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,16 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="{%static 'style/general.css'%}">
+    <link rel="stylesheet" href="{% static 'style/general.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
+        <link defer rel="stylesheet" href="{% static 'style/nav.css' %}">
+    <link defer rel="stylesheet" href="{% static 'style/footer.css' %}">
+    <link defer rel="stylesheet" href="{% static 'style/landing.css' %}">
+    <link defer rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+
+        <title>Ensinas - Estudantes, ajudando estudantes.</title>
+       
 </head>
 
 <body>
     {% block content %}
 
-    {%endblock%}
+    {% endblock %}
 </body>
 
 </html>
