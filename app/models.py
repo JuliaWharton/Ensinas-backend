@@ -16,7 +16,7 @@ class Aluno(models.Model):
     email = models.EmailField()
     senha = models.CharField(max_length=256)
 
-    def __str(self):
+    def __str__(self):
         return self.email
 
 class Professor(models.Model):
