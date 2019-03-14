@@ -1,0 +1,114 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #0d0d0d;
+}
+
+p {
+    color: white;
+}
+
+button {
+    background-color: white;
+    border-radius: 5px;
+    color: #ff6600;
+    cursor: pointer;
+    padding: 10px 30px;
+    font-weight: bolder;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.24), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+#main {
+    display: grid;
+    grid-template-areas:
+        '. . . . .'
+        '. login1 logo login2 .'
+        '. . . . .';
+    grid-template-columns: 1fr 380px 400px 380px 1fr;
+    grid-template-rows: 1fr 420px 1fr;
+
+    min-height: 100%;
+    width: 100%;
+}
+
+#main .login:nth-child(1) {
+    grid-area: login1;
+}
+
+#main .login:nth-child(3) {
+    grid-area: login2;
+}
+
+#logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#logo img {
+    height: auto;
+    width: 50%;
+}
+
+#logo h1 {
+    font-size: 80px;
+    color: white;
+    margin: 20px 0;
+}
+
+#logo span {
+    color: #ff6600;
+}
+
+#logo p {
+    font-size: 30px;
+}
+
+.login {
+    background-color: #ff6600;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.login-texto {
+    text-align: center;
+}
+
+.login-texto p {
+    font-size: 20pt;
+}
+
+.login-texto h2 {
+    font-size: 50pt;
+    color: white;
+}
+
+.login-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-input p {
+    font-size: 16pt;
+}

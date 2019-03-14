@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="stylesheet" href="{%static 'style/login.css' %}">
+
+    <title>Ensinas - Login</title>
+</head>
+
+<body>
+    <div class='flex' id='main'>
+
+        <div class="login flex">
+            <div class="login-texto">
+                <p>Está aqui para</p>
+                <h2>Aprender?</h2>
+            </div>
+            <div class="login-input">
+                <p>Email:</p>
+                <input type="email" name="aluno-email"><br>
+            </div>
+            <div class="login-input">
+                <p>Senha:</p>
+                <input type="password" name="aluno-senha"><br>
+            </div>
+            <button>Entrar</button>
+        </div>
+
+        <div id="logo">
+            <img src="{% static 'img/logo.png' %}" alt="">
+            <h1>Ensi<span>nas</span></h1>
+            <p>Estudantes, ajudando estudantes.</p>
+        </div>
+
+        <div class="login flex">
+            <div class="login-texto">
+                <p>Está aqui para</p>
+                <h2>Ensinar?</h2>
+            </div>
+
+            <div class="login-input">
+                <p>Email:</p>
+                <input type="email" name="professor-email"><br>
+            </div>
+
+            <div class="login-input">
+                <p>Senha:</p>
+                <input type="password" name="professor-senha"><br>
+            </div>
+            <button>Entrar</button>
+        </div>
+    </div>
+</body>
+
+</html>

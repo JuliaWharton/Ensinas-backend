@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="stylesheet" href="{% static 'style/cadastro.css' %}">
+
+    <title>Ensinas - Cadastro</title>
+</head>
+
+<body>
+    <div id='main'>
+        <!-- parte de cima  -->
+        <div class="cadastro">
+
+            <div class="cadastro-texto">
+                <p>Está aqui para</p>
+                <h2>Aprender?</h2>
+                <p>Cadastre-se!</p>
+            </div>
+
+            <div class="cadastro-input">
+                <p>Nome:</p>
+                <input type="text" name="fname"><br>
+            </div>
+            <div class="cadastro-input">
+
+                <p>Email:</p>
+                <input type="email" name="fname"><br>
+
+            </div>
+
+            <div class="cadastro-input">
+                <p>Senha:</p>
+                <input type="password" name="fname"><br>
+            </div>
+            <div class="cadastro-input">
+                <p>Confirme a senha:</p>
+                <input type="password" name="fname"><br>
+            </div>
+
+            <button>Cadastre-se</button>
+        </div>
+
+        <div id="logo">
+            <img src="{% static 'img/logo.png' %}" alt="">
+            <h1>Ensi<span>nas</span></h1>
+            <p>Estudantes, ajudando estudantes.</p>
+        </div>
+
+        <div class="cadastro">
+            <div class="cadastro-texto">
+                <p>Está aqui para</p>
+                <h2>Ensinar?</h2>
+                <p>Cadastre-se!</p>
+            </div>
+
+            <div class="cadastro-input">
+                <p>Nome:</p>
+                <input type="text" name="fname"><br>
+            </div>
+            <div class="cadastro-input">
+                <p>Email:</p>
+                <input type="email" name="fname"><br>
+            </div>
+            <div class="cadastro-input">
+                <p>Senha:</p>
+                <input type="password" name="fname"><br>
+            </div>
+            <div class="cadastro-input">
+                <p>Confirme a senha:</p>
+                <input type="password" name="fname"><br>
+            </div>
+            <button>Cadastre-se</button>
+
+        </div>
+</body>
+
+</html>

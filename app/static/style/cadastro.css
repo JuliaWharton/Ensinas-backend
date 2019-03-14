@@ -1,0 +1,97 @@
+body {
+    background-color: #0d0d0d
+}
+
+p {
+    color: white;
+}
+
+#main {
+    display: grid;
+    grid-template-areas: '. . . . .'
+        '. cadastro1 logo cadastro2 .'
+        '. . . . .';
+    grid-template-columns: 1fr 400px 400px 400px 1fr;
+    grid-template-rows: 1fr 550px 1fr;
+
+    height: 100%;
+}
+
+#main .cadastro:nth-child(1) {
+    grid-area: cadastro1;
+}
+
+#main .cadastro:nth-child(3) {
+    grid-area: cadastro2;
+}
+
+.cadastro {
+    background-color: #ff6600;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cadastro-texto {
+    text-align: center;
+}
+
+.cadastro-texto p {
+    font-size: 20pt;
+}
+
+.cadastro-texto h2 {
+    font-size: 50pt;
+    color: white;
+}
+
+.cadastro-input p {
+    font-size: 16pt;
+    font-family: 'Roboto';
+    color: white;
+}
+
+.cadastro button {
+    background-color: white;
+    border-radius: 5px;
+    color: #ff6600;
+    cursor: pointer;
+    padding: 10px 30px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.cadastro button:hover {
+    box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.24), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+#logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#logo img {
+    height: auto;
+    width: 50%;
+}
+
+#logo span {
+    color: #ff6600
+}
+
+#logo h1 {
+    font-size: 80px;
+    color: white;
+    margin: 20px 0;
+}
+
+#logo p {
+    font-size: 30px;
+}
