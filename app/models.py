@@ -24,9 +24,9 @@ class Professor(models.Model):
     email = models.EmailField()
     senha = models.CharField(max_length=256)
     aprovado = models.BooleanField(default=False)
-    materia = models.ForeignKey(Materia, on_delete=models.SET_DEFAULT, default=None)
+    materia = models.ForeignKey(Materia, on_delete=models.SET_DEFAULT, default=None, verbose_name="Matéria")
     curso = models.CharField(max_length=256, default=None)
-    instituicao = models.CharField(max_length=256, default=None)
+    instituicao = models.CharField(max_length=256, default=None, verbose_name="Instituição")
     alunos = models.ManyToManyField(Aluno, through='Contato')
 
     def __str__(self):
