@@ -7,6 +7,10 @@ class Materia(models.Model):
     def __str__(self):
         return self.nome
 
+    class Meta:
+        verbose_name = "Matéria"
+        verbose_name_plural = "Matérias"
+
 class Aluno(models.Model):
     nome = models.CharField(max_length=256)
     email = models.EmailField()
