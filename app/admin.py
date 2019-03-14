@@ -1,7 +1,10 @@
 from django.contrib import admin
 from app.models import Aluno, Contato, Materia, Professor
 
-# Register your models here.
+admin.site.site_title = "Admin Ensinas"
+admin.site.site_header = "Administração Ensinas"
+admin.site.index_title = "Administração do Sistema"
+
 @admin.register(Materia)
 class MateriaAdmin(admin.ModelAdmin):
     list_display = ('nome',)
