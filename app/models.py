@@ -26,11 +26,14 @@ class Professor(models.Model):
     aprovado = models.BooleanField(default=False)
     materia = models.ForeignKey(Materia, on_delete=models.SET_DEFAULT, default=None)
     curso = models.CharField(max_length=256, default=None)
-    instiuicao = models.CharField(max_length=256, default=None)
+    instituicao = models.CharField(max_length=256, default=None)
     alunos = models.ManyToManyField(Aluno, through='Contato')
 
     def __str(self):
         return self.email
+
+    class Meta:
+        verbose_name_plural = "Professores"
 
 class Contato(models.Model):
     professor = models.ForeignKey(Professor, on_delete=models.CASCADE)
