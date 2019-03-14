@@ -29,7 +29,7 @@ class Professor(models.Model):
     instituicao = models.CharField(max_length=256, default=None)
     alunos = models.ManyToManyField(Aluno, through='Contato')
 
-    def __str(self):
+    def __str__(self):
         return self.email
 
     class Meta:
