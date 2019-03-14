@@ -139,6 +139,7 @@ aside div button {
     border-color: black;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     padding-left: 3%;
     cursor: pointer;
 }
