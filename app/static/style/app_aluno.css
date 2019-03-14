@@ -126,10 +126,10 @@ aside div {
     height: 90%;
 }
 
-aside div button {
-    width: 90%;
-    height: 4%;
-    margin: 1%;
+aside button {
+    width: 300px;
+    height: 55px;
+    margin: 5px;
     border-radius: 10px;
     background-color: #ffff;
     border-width: 5px;
@@ -140,24 +140,31 @@ aside div button {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 3%;
+    padding-left: 15px;
     cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.25em;
+    font-weight: bold;
 }
 
 aside div button:hover {
     background-color: black;
-    border: black;
-}
-
-aside div button:hover a {
+    border: none;
+    transition: 0.3s;
     color: #fff;
 }
 
-aside a {
+aside div a {
     font-family: 'Roboto';
-    font-size: 1.5em;
     text-decoration: none;
     color: black;
+}
+
+aside div .atual {
+    background-color: #dd5500;
+    transition: 0.3s;
+    color: #ffffff;
+    border: none;
 }
 
 main {

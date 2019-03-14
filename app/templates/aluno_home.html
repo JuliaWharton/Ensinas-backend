@@ -34,14 +34,13 @@
     <aside>
         <p>Qual matéria tá difícil?</p>
         <div>
-            <button><a href="">Programação</a></button>
-            <button><a href="">Inglês</a></button>
-            <button><a href="">Matemática</a></button>
-            <button><a href="">Física</a></button>
-            <button><a href="">Biologia</a></button>
-            <button><a href="">Português</a></button>
-            <button><a href="">História</a></button>
-            <button><a href="">Química</a></button>
+            {% for materia in materias%}
+                {% if materia_atual and materia.id == materia_atual.id %}
+                    <button class="atual">{{materia.nome}}</button>
+                {% else %}
+                    <a href="{% url 'app_aluno_materia' materia.id %}"><button>{{materia.nome}}</button></a>
+                {% endif %}
+            {% endfor %}
         </div>
     </aside>
     <main>
