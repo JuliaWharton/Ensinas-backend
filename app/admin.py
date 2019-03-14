@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import Aluno, Materia, Professor
+from app.models import Aluno, Contato, Materia, Professor
 
 # Register your models here.
 @admin.register(Materia)
@@ -19,3 +19,9 @@ class ProfessorAdmin(admin.ModelAdmin):
     list_display = ('nome', 'email', 'aprovado', 'instituicao', 'curso')
     ordering = ('nome', 'email')
     search_fields = ['nome', 'email', 'instituicao', 'curso']
+
+@admin.register(Contato)
+class ContatoAdmin(admin.ModelAdmin):
+    list_display = ('aluno', 'professor', 'oculto')
+    ordering = ('aluno', 'professor')
+    search_fields = ('aluno', 'professor')
