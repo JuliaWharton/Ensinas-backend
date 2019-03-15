@@ -4,6 +4,7 @@ body {
     grid-template-areas: 'nav nav''aside main''aside main';
     grid-template-columns: 25% 74.5%;
     grid-template-rows: 12vh 100vh 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav {
@@ -24,7 +25,6 @@ nav div:nth-child(1) {
     height: 73.59px;
     background-color: #000000;
     font-size: 1.8em;
-    font-family: 'Roboto';
 }
 
 nav div:nth-child(1) img {
@@ -76,13 +76,12 @@ nav div:nth-child(3) {
 
 nav div:nth-child(3) p {
     font-size: 1.5em;
-    font-family: 'Roboto';
     font-weight: bold;
     width: 50%;
 }
 
-nav h1 {
-    text-transform: uppercase;
+nav h1 span {
+    color: #ff6600;
 }
 
 #icone1 {
@@ -114,8 +113,6 @@ aside {
 aside p {
     font-size: 2em;
     color: #ffff;
-    font-family: 'Roboto';
-
 }
 
 aside div {
@@ -155,7 +152,6 @@ aside div button:hover {
 }
 
 aside div a {
-    font-family: 'Roboto';
     text-decoration: none;
     color: black;
 }
@@ -178,7 +174,6 @@ main {
 main p {
     font-size: 1.8em;
     color: rgb(242, 105, 53);
-    font-family: 'Roboto';
     font-weight: bold;
 }
 
@@ -205,19 +200,17 @@ main p {
 }
 
 .infoProfessor {
-    width: 20vw;
+    width: 330px;
     height: 20vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around
+    justify-content: space-around;
 }
 
 .infoProfessor p {
-    margin: 0;
     font-size: 1.3em;
     margin: 4px;
     color: #000000;
-    font-family: 'Roboto';
     align-self: flex-end;
     font-weight: bold;
 }
@@ -233,7 +226,6 @@ main p {
     width: 15vw;
     height: 6vh;
     font-size: 1.5em;
-    font-family: 'Roboto';
     background-color: rgb(245, 134, 52);
     border: none;
     border-radius: 10px;
