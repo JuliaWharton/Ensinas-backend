@@ -19,7 +19,7 @@
     <nav>
         <div>
             <img src="{% static 'img/logo_branco.png' %}" alt="Logo do site, imagem de um capelo e óculos.">
-            <h1>Ensinas</h1>
+            <h1>Ensi<span>nas</span></h1>
         </div>
         <div>
             <input placeholder="Buscar tópico" type="text">
@@ -44,33 +44,22 @@
         </div>
     </aside>
     <main>
-        <p>Seus tutores estão a um clique de distância!</p>
-        <div class="fichaProfessor">
-            <img class="imgProfessor" src="{% static 'img/aluno_1.png' %}" alt="">
-            <div class="infoProfessor">
-                <p>Cesar Sharp</p>
-                <p>História</p>
-                <p>Uninove</p>
+        {% if professores.count > 0 %}
+            <p>Seus tutores estão a um clique de distância!</p>
+            {% for professor in professores %}
+            <div class="fichaProfessor">
+                <img class="imgProfessor" src="{% static 'img/aluno_2.png' %}" alt="">
+                <div class="infoProfessor">
+                    <p>{{professor.nome}}</p>
+                    <p>{{professor.curso}}</p>
+                    <p>{{professor.instituicao}}</p>
+                </div>
+                <button> Quero ajuda!</button>
             </div>
-            <button> Quero ajuda! </button>
-        </div>
-        <div class="fichaProfessor">
-            <img class="imgProfessor" src="{% static 'img/aluno_2.png' %}" alt="">
-            <div class="infoProfessor">
-                <p>Felipe Inácio</p>
-                <p>História</p>
-                <p>PUC</p>
-            </div>
-            <button> Quero ajuda!</button>
-        </div>
-        <div class="fichaProfessor">
-            <img class="imgProfessor" src="{% static 'img/aluno_3.png' %}" alt="">
-            <div class="infoProfessor">
-                <p>Lydia Schuanti</p>
-                <p>História</p>
-                <p>USP</p>
-            </div>
-            <button> Quero ajuda! </button>
+            {% endfor %}
+        {% else %}
+            <p>Não foi encontrado nenhum tutor por sua busca :(</p>
+        {% endif %}
     </main>
 </body>
 
