@@ -9,7 +9,7 @@ def auth_login(request):
 
 def aluno_home(request):
     materias = Materia.objects.all()
-    professores = Professor.objects.all()
+    professores = Professor.objects.filter(aprovado=True)
 
     return render(request, 'aluno_home.html', {
         "materias": materias,
@@ -20,7 +20,7 @@ def aluno_home(request):
 def aluno_materia(request, id_materia):
     materias = Materia.objects.all()
     materia_atual = Materia.objects.get(pk=id_materia)
-    professores = Professor.objects.filter(materia=id_materia)
+    professores = Professor.objects.filter(materia=id_materia,aprovado=True)
 
     return render(request, 'aluno_home.html', {
         "materias": materias, 
