@@ -2,7 +2,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-areas: 'nav nav''aside main''aside main';
-    grid-template-columns: 25% 74.5%;
+    grid-template-columns: 25% 75.5%;
     grid-template-rows: 12vh 100vh 100vh;
     font-family: 'Roboto', sans-serif;
 }
@@ -11,7 +11,7 @@ nav {
     grid-area: nav;
     background-color: #ff6600;
     border-bottom: 5px solid #dd5500;
-    color: #ffff;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +23,7 @@ nav div:nth-child(1) {
     justify-content: center;
     width: 337.75px;
     height: 73.59px;
-    background-color: #000000;
+    background-color: #0d0d0d;
     font-size: 1.8em;
 }
 
@@ -43,7 +43,7 @@ nav div:nth-child(2) {
 nav div:nth-child(2) input {
     width: 90%;
     height: 35px;
-    border: 2px solid #000000;
+    border: 2px solid #0d0d0d;
     text-align: center;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -56,7 +56,7 @@ nav div:nth-child(2) button {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     height: 41px;
-    border: 2px solid #000000;
+    border: 2px solid #0d0d0d;
     border-left: none;
     width: 10%;
 }
@@ -84,22 +84,16 @@ nav h1 span {
     color: #ff6600;
 }
 
-#icone1 {
+.iconePerfil {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 25%;
-}
-
-#icone2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
+    height: 100%;
 }
 
 .iconePerfil:hover {
-    background-color: rgba(0, 0, 0, 0.705);
+    background-color: #dd5500;
 }
 
 aside {
@@ -133,7 +127,8 @@ aside button {
     border-top-width: 1px;
     border-left-width: 1px;
     border-bottom-width: 3px;
-    border-color: black;
+    border-color: #dd5500;
+    border-style: solid;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -145,15 +140,15 @@ aside button {
 }
 
 aside div button:hover {
-    background-color: black;
+    background-color: #0d0d0d;
     border: none;
     transition: 0.3s;
-    color: #fff;
+    color: #ffffff;
 }
 
 aside div a {
     text-decoration: none;
-    color: black;
+    color: #0d0d0d;
 }
 
 aside div .atual {
@@ -165,7 +160,7 @@ aside div .atual {
 
 main {
     grid-area: main;
-    background-color: #ffff;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,7 +168,7 @@ main {
 
 main p {
     font-size: 1.8em;
-    color: rgb(242, 105, 53);
+    color: #ff6600;
     font-weight: bold;
 }
 
@@ -181,7 +176,7 @@ main p {
     width: 60vw;
     height: 20vh;
     margin: 1%;
-    border: solid #000000;
+    border: solid #0d0d0d;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -195,7 +190,7 @@ main p {
 
 .imgProfessor {
     width: 13%;
-    border: 3px solid #000000;
+    border: 3px solid #0d0d0d;
     border-radius: 50%;
 }
 
@@ -210,13 +205,13 @@ main p {
 .infoProfessor p {
     font-size: 1.3em;
     margin: 4px;
-    color: #000000;
+    color: #0d0d0d;
     align-self: flex-end;
     font-weight: bold;
 }
 
 .infoProfessor p:nth-child(1) {
-    color: rgb(242, 105, 53);
+    color: #dd5500;
     font-size: 1.5em;
 }
 
