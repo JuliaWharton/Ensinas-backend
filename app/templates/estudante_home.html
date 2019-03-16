@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'style/estudante_home.css' %}">
+    <script defer src="{% static 'js/estudante_home.js' %}"></script>>
 
     <title>Ensinas - Estudante</title>
 </head>
@@ -54,7 +55,11 @@
                     <p>{{mentor.curso}}</p>
                     <p>{{mentor.instituicao}}</p>
                 </div>
-                <button> Quero ajuda!</button>
+                {% if materia_atual %}
+                    <a href="{% url 'app_estudante_contato_materia' mentor.id materia_atual.id%}"><button>Quero ajuda!</button></a>
+                {% else %}
+                <a href="{% url 'app_estudante_contato' mentor.id%}"><button>Quero ajuda!</button></a>
+                {% endif %}
             </div>
             {% endfor %}
         {% else %}

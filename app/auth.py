@@ -3,7 +3,8 @@ from app.models import Estudante
 
 def logout(request):
     del request.session["estudante_id"]
-    del request.session["mentor_id"]    
+    del request.session["mentor_id"]
+    request.session.modified = True
 
 def estudante_get(request):
     if request.session.get("estudante_id") is not None:
@@ -25,6 +26,7 @@ def estudante_login(request, email, senha):
 
         if(check_password(senha, estudante.senha)):
             request.session["estudante_id"] = estudante.id
+            request.session.modified = True
             return True
     except Estudante.DoesNotExist:
             pass

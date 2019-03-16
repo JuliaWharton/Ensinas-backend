@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password, check_password
-from app.models import Estudante, Materia, Mentor
+from app.models import Contato, Estudante, Materia, Mentor
 from app import forms, auth
 
 def auth_cadastro(request):
@@ -77,6 +77,49 @@ def estudante_materia(request, id_materia):
 			})
 	else:
 		return redirect('app_auth_login')
+
+def estudante_contato(request, id_mentor):
+	estudante = auth.estudante_get(request)
+
+	if estudante is not None:
+		try:
+			mentor = Mentor.objects.get(pk=id_mentor)
+
+			try:
+				contato = Contato.objects.get(mentor=mentor,estudante=estudante)
+
+			except Contato.DoesNotExist:
+				contato = Contato()
+				contato.mentor = mentor
+				contato.estudante = estudante
+				contato.save()
+
+		except Mentor.DoesNotExist:
+			pass
+
+	return redirect('app_estudante_home')
+
+def estudante_contato_materia(request, id_mentor, id_materia):
+	estudante = auth.estudante_get(request)
+
+	if estudante is not None:
+		try:
+			mentor = Mentor.objects.get(pk=id_mentor)
+
+			try:
+				contato = Contato.objects.get(mentor=mentor,estudante=estudante)
+
+			except Contato.DoesNotExist:
+				contato = Contato()
+				contato.mentor = mentor
+				contato.estudante = estudante
+				contato.save()
+
+		except Mentor.DoesNotExist:
+			pass
+
+	return redirect('app_estudante_materia', id_materia)
+	
 
 def mentor_home(request):
 	return render(request, 'mentor_home.html')
