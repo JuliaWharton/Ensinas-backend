@@ -27,8 +27,8 @@
         </div>
         <div>
             <p>{{estudante.nome}}</p>
-            <span class="iconePerfil" id="icone1"><i class="fas fa-cog"></i></span>
-            <span class="iconePerfil" id="icone2"><i class="fas fa-sign-out-alt"></i></span>
+            <!--<span class="iconePerfil" id="icone1"><i class="fas fa-cog"></i></span>-->
+            <a href="{% url 'app_auth_logout' %}" class="iconePerfil"><span><i class="fas fa-sign-out-alt"></i></span></a>
         </div>
     </nav>
     <aside>

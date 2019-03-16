@@ -40,6 +40,11 @@ def auth_login(request):
 			'form_mentor': form_mentor
 	})
 
+def auth_logout(request):
+	auth.logout(request)
+
+	return redirect('app_auth_login')
+
 def estudante_home(request):
 	estudante = auth.estudante_get(request)
 	
