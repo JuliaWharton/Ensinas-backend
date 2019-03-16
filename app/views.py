@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app.models import Materia, Professor
+from app.models import Materia, Mentor
 
 def auth_cadastro(request):
     return render(request, 'auth_cadastro.html')
@@ -7,26 +7,26 @@ def auth_cadastro(request):
 def auth_login(request):
     return render(request, 'auth_login.html')
 
-def aluno_home(request):
+def estudante_home(request):
     materias = Materia.objects.all()
-    professores = Professor.objects.filter(aprovado=True)
+    mentores = Mentor.objects.filter(aprovado=True)
 
-    return render(request, 'aluno_home.html', {
+    return render(request, 'estudante_home.html', {
         "materias": materias,
-        "professores": professores
+        "mentores": mentores
         })
 
 
-def aluno_materia(request, id_materia):
+def estudante_materia(request, id_materia):
     materias = Materia.objects.all()
     materia_atual = Materia.objects.get(pk=id_materia)
-    professores = Professor.objects.filter(materia=id_materia,aprovado=True)
+    mentores = Mentor.objects.filter(materia=id_materia,aprovado=True)
 
-    return render(request, 'aluno_home.html', {
+    return render(request, 'estudante_home.html', {
         "materias": materias, 
         "materia_atual": materia_atual,
-        "professores": professores
+        "mentores": mentores
         })
 
-def professor_home(request):
-    return render(request, 'professor_home.html')
+def mentor_home(request):
+    return render(request, 'mentor_home.html')

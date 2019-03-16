@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'style/app_aluno.css' %}">
+    <link rel="stylesheet" href="{% static 'style/estudante_home.css' %}">
 
-    <title>Ensinas - Aluno</title>
+    <title>Ensinas - Estudante</title>
 </head>
 
 <body>
@@ -38,21 +38,21 @@
                 {% if materia_atual and materia.id == materia_atual.id %}
                     <button class="atual">{{materia.nome}}</button>
                 {% else %}
-                    <a href="{% url 'app_aluno_materia' materia.id %}"><button>{{materia.nome}}</button></a>
+                    <a href="{% url 'app_estudante_materia' materia.id %}"><button>{{materia.nome}}</button></a>
                 {% endif %}
             {% endfor %}
         </div>
     </aside>
     <main>
-        {% if professores.count > 0 %}
+        {% if mentores.count > 0 %}
             <p>Seus tutores estão a um clique de distância!</p>
-            {% for professor in professores %}
+            {% for mentor in mentores %}
             <div class="fichaProfessor">
                 <img class="imgProfessor" src="{% static 'img/aluno_2.png' %}" alt="">
                 <div class="infoProfessor">
-                    <p>{{professor.nome}}</p>
-                    <p>{{professor.curso}}</p>
-                    <p>{{professor.instituicao}}</p>
+                    <p>{{mentor.nome}}</p>
+                    <p>{{mentor.curso}}</p>
+                    <p>{{mentor.instituicao}}</p>
                 </div>
                 <button> Quero ajuda!</button>
             </div>

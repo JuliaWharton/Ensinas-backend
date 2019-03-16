@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     path('auth/cadastro', views.auth_cadastro, name='app_auth_cadastro'),
     path('auth/login', views.auth_login, name='app_auth_login'),
-    path('aluno/home', views.aluno_home, name='app_aluno_home'),
-    path('aluno/home/<int:id_materia>', views.aluno_materia, name='app_aluno_materia'),
-    path('professor/home', views.professor_home, name='app_professor_home'),
+    path('estudante/home', views.estudante_home, name='app_estudante_home'),
+    path('estudante/home/<int:id_materia>', views.estudante_materia, name='app_estudante_materia'),
+    path('mentor/home', views.mentor_home, name='app_mentor_home'),
 ]

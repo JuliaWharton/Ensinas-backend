@@ -1,5 +1,5 @@
 from django.contrib import admin
-from app.models import Aluno, Contato, Materia, Professor
+from app.models import Contato, Estudante, Materia, Mentor
 
 admin.site.site_title = "Admin Ensinas"
 admin.site.site_header = "Administração Ensinas"
@@ -11,20 +11,20 @@ class MateriaAdmin(admin.ModelAdmin):
     ordering = ('nome',)
     search_fields = ('nome',)
 
-@admin.register(Aluno)
-class AlunoAdmin(admin.ModelAdmin):
+@admin.register(Estudante)
+class EstudanteAdmin(admin.ModelAdmin):
     list_display = ('nome', 'email')
     ordering = ('nome',)
     search_fields = ('nome', 'email')
 
-@admin.register(Professor)
-class ProfessorAdmin(admin.ModelAdmin):
+@admin.register(Mentor)
+class MentorAdmin(admin.ModelAdmin):
     list_display = ('nome', 'email', 'aprovado', 'instituicao', 'curso')
     ordering = ('nome', 'email')
     search_fields = ('nome', 'email', 'instituicao', 'curso')
 
 @admin.register(Contato)
 class ContatoAdmin(admin.ModelAdmin):
-    list_display = ('aluno', 'professor', 'oculto')
-    ordering = ('aluno', 'professor')
-    search_fields = ('aluno', 'professor')
+    list_display = ('estudante', 'mentor', 'oculto')
+    ordering = ('estudante', 'mentor')
+    search_fields = ('estudante', 'mentor')

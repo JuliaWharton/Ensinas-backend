@@ -11,7 +11,7 @@ class Materia(models.Model):
         verbose_name = "Matéria"
         verbose_name_plural = "Matérias"
 
-class Aluno(models.Model):
+class Estudante(models.Model):
     nome = models.CharField(max_length=256)
     email = models.EmailField()
     senha = models.CharField(max_length=256)
@@ -19,7 +19,7 @@ class Aluno(models.Model):
     def __str__(self):
         return f'{self.nome} ({self.email})'
 
-class Professor(models.Model):
+class Mentor(models.Model):
     nome = models.CharField(max_length=256)
     email = models.EmailField()
     senha = models.CharField(max_length=256)
@@ -27,18 +27,18 @@ class Professor(models.Model):
     materia = models.ForeignKey(Materia, on_delete=models.SET_DEFAULT, default=None, verbose_name="Matéria")
     curso = models.CharField(max_length=256, default=None)
     instituicao = models.CharField(max_length=256, default=None, verbose_name="Instituição")
-    alunos = models.ManyToManyField(Aluno, through='Contato')
+    estudantes = models.ManyToManyField(Estudante, through='Contato')
 
     def __str__(self):
         return f'{self.nome} ({self.email})'
 
     class Meta:
-        verbose_name_plural = "Professores"
+        verbose_name_plural = "Mentores"
 
 class Contato(models.Model):
-    professor = models.ForeignKey(Professor, on_delete=models.CASCADE)
-    aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
+    mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE)
+    estudante = models.ForeignKey(Estudante, on_delete=models.CASCADE)
     oculto = models.BooleanField(default=False)
 
     def __str__(self):
-        return f'{self.aluno} - {self.professor}'
+        return f'{self.estudante} - {self.mentor}'
