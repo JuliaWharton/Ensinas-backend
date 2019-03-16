@@ -93,5 +93,10 @@ p {
 }
 
 #logo p {
-    font-size: 30px;
+    font-size: 18pt;
+}
+
+#logo p:nth-of-type(1){
+    text-transform: uppercase;
+    font-weight: bolder;
 }
