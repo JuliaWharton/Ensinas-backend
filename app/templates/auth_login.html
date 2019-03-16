@@ -22,15 +22,11 @@
                 <p>Está aqui para</p>
                 <h2>Aprender?</h2>
             </div>
-            <div class="login-input">
-                <p>Email:</p>
-                <input type="email" name="aluno-email"><br>
-            </div>
-            <div class="login-input">
-                <p>Senha:</p>
-                <input type="password" name="aluno-senha"><br>
-            </div>
-            <button>Entrar</button>
+            <form>
+                {% csrf_token %}
+                {{form_estudante.as_p}}
+                <button>Entrar</button>
+            </form>
         </div>
 
         <div id="logo">
@@ -45,16 +41,11 @@
                 <h2>Ensinar?</h2>
             </div>
 
-            <div class="login-input">
-                <p>Email:</p>
-                <input type="email" name="professor-email"><br>
-            </div>
-
-            <div class="login-input">
-                <p>Senha:</p>
-                <input type="password" name="professor-senha"><br>
-            </div>
-            <button>Entrar</button>
+            <form>
+                {% csrf_token %}
+                {{form_mentor.as_p}}
+                <button>Entrar</button>
+            </form>
         </div>
     </div>
 </body>

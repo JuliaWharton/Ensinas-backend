@@ -1,11 +1,18 @@
 from django.shortcuts import render
 from app.models import Materia, Mentor
+from app import forms
 
 def auth_cadastro(request):
     return render(request, 'auth_cadastro.html')
 
 def auth_login(request):
-    return render(request, 'auth_login.html')
+    form_estudante = forms.EstudanteLoginForm()
+    form_mentor = forms.MentorLoginForm()
+
+    return render(request, 'auth_login.html', {
+            'form_estudante': form_estudante,
+            'form_mentor': form_mentor
+    })
 
 def estudante_home(request):
     materias = Materia.objects.all()

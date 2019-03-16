@@ -104,11 +104,15 @@ button:hover {
     color: white;
 }
 
-.login-input {
+form {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 250px;
 }
 
-.login-input p {
+form p{
+    width: 350px;
     font-size: 16pt;
 }
