@@ -22,9 +22,11 @@
                 <p>Está aqui para</p>
                 <h2>Aprender?</h2>
             </div>
-            <form>
+            <form method="POST">
                 {% csrf_token %}
                 {{form_estudante.as_p}}
+                <input type="hidden" value="login_estudante" name="do">
+                
                 <button>Entrar</button>
             </form>
         </div>
@@ -42,9 +44,11 @@
                 <h2>Ensinar?</h2>
             </div>
 
-            <form>
+            <form method="POST">
                 {% csrf_token %}
                 {{form_mentor.as_p}}
+                <input type="hidden" value="login_mentor" name="do">
+
                 <button>Entrar</button>
             </form>
         </div>
