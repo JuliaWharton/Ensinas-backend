@@ -47,13 +47,20 @@ p {
     color: white;
 }
 
-.cadastro-input p {
-    font-size: 16pt;
-    font-family: 'Roboto';
-    color: white;
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 350px;
 }
 
-.cadastro button {
+form p{
+    width: 350px;
+    font-size: 16pt;
+}
+
+form button {
     background-color: white;
     border-radius: 5px;
     color: #ff6600;
@@ -63,7 +70,7 @@ p {
     text-transform: uppercase;
 }
 
-.cadastro button:hover {
+form button:hover {
     box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.24), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
     transition: 0.3s;
 }

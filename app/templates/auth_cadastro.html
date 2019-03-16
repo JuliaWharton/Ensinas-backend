@@ -25,27 +25,11 @@
                 <p>Cadastre-se!</p>
             </div>
 
-            <div class="cadastro-input">
-                <p>Nome:</p>
-                <input type="text" name="fname"><br>
-            </div>
-            <div class="cadastro-input">
-
-                <p>Email:</p>
-                <input type="email" name="fname"><br>
-
-            </div>
-
-            <div class="cadastro-input">
-                <p>Senha:</p>
-                <input type="password" name="fname"><br>
-            </div>
-            <div class="cadastro-input">
-                <p>Confirme a senha:</p>
-                <input type="password" name="fname"><br>
-            </div>
-
-            <button>Cadastre-se</button>
+            <form>
+                {% csrf_token %}
+                {{form_estudante.as_p}}
+                <button>Cadastre-se</button>
+            </form>
         </div>
 
         <div id="logo">
@@ -62,23 +46,11 @@
                 <p>Cadastre-se!</p>
             </div>
 
-            <div class="cadastro-input">
-                <p>Nome:</p>
-                <input type="text" name="fname"><br>
-            </div>
-            <div class="cadastro-input">
-                <p>Email:</p>
-                <input type="email" name="fname"><br>
-            </div>
-            <div class="cadastro-input">
-                <p>Senha:</p>
-                <input type="password" name="fname"><br>
-            </div>
-            <div class="cadastro-input">
-                <p>Confirme a senha:</p>
-                <input type="password" name="fname"><br>
-            </div>
-            <a href="{% url 'app_mentor_home' %}"><button>Cadastre-se</button></a>
+            <form>
+                {% csrf_token %}
+                {{form_mentor.as_p}}
+                <button>Cadastre-se</button>
+            </form>
 
         </div>
 </body>

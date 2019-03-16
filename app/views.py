@@ -3,7 +3,13 @@ from app.models import Materia, Mentor
 from app import forms
 
 def auth_cadastro(request):
-    return render(request, 'auth_cadastro.html')
+    form_estudante = forms.EstudanteCadastroForm()
+    form_mentor = forms.MentorCadastroForm()
+
+    return render(request, 'auth_cadastro.html', {
+            'form_estudante': form_estudante,
+            'form_mentor': form_mentor
+    })
 
 def auth_login(request):
     form_estudante = forms.EstudanteLoginForm()
