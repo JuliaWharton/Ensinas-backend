@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password, check_password
+import sweetify
+
 from app.models import Estudante, Materia, Mentor, Solicitacao
 from app.auth import estudante_auth
 
@@ -39,6 +41,8 @@ def contato(request, id_mentor, id_materia):
 			mentor = Mentor.objects.get(pk=id_mentor)
 
 			solicitacao = Solicitacao.objects.filter(mentor=mentor,estudante=estudante).get_or_create(mentor=mentor, estudante=estudante, oculto=False)
+
+			sweetify.success(request, 'Tudo certo!', text='Solicitação de contato enviada para o mentor! Favor aguardar que o mentor entrará em contato.',button='Ok', timer=3000)
 		except Mentor.DoesNotExist:
 			pass
 
