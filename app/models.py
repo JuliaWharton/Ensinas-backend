@@ -13,7 +13,7 @@ class Materia(models.Model):
 
 class Estudante(models.Model):
     nome = models.CharField(max_length=256)
-    email = models.EmailField()
+    email = models.EmailField(verbose_name="E-mail")
     senha = models.CharField(max_length=256)
 
     def __str__(self):
@@ -21,7 +21,7 @@ class Estudante(models.Model):
 
 class Mentor(models.Model):
     nome = models.CharField(max_length=256)
-    email = models.EmailField()
+    email = models.EmailField(verbose_name="E-mail")
     senha = models.CharField(max_length=256)
     aprovado = models.BooleanField(default=False)
     materia = models.ForeignKey(Materia, on_delete=models.SET_DEFAULT, default=None, verbose_name="Matéria")
