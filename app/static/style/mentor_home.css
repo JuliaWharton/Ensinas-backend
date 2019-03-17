@@ -179,6 +179,7 @@ aside button {
     list-style: none;
     padding: 0;
     flex-direction: column;
+    align-items: center;
 }
 
 .aluno {
@@ -188,8 +189,9 @@ aside button {
     grid-template-columns: 30px 2fr 1fr 30px;
 
     height: 110px;
-    width: 100%;
+    width: 90%;
     border-bottom: 3px solid #dd5500;
+    border-radius: 20px;
 }
 
 .aluno div {
@@ -209,7 +211,7 @@ aside button {
 
 .aluno p {
     margin-left: 15px;
-    font-size: 25pt;
+    font-size: 1.5em;
     font-weight: bold;
     color: #ff6600;
 }
@@ -223,16 +225,18 @@ aside button {
 
     display: flex;
     justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .aluno button {
-    height: 50px;
+    height: 40px;
     color: #ffffff;
     border: none;
     background-color: #ff6600;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     padding: 0 25px;
     border-radius: 12px;
     margin-left: 25px;
+    margin-bottom: 5px;
 }
