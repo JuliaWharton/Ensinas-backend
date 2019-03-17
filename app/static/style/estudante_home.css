@@ -216,7 +216,7 @@ main p {
 }
 
 .infoProfessor p:nth-child(1) {
-    color: #dd5500;
+    color: #ff6600;
     font-size: 1.5em;
 }
 
@@ -226,10 +226,18 @@ main p {
     width: 15vw;
     height: 6vh;
     font-size: 1.5em;
-    background-color: rgb(245, 134, 52);
+    background-color: #ff6600;
+    transition: 0.3s;
     border: none;
     border-radius: 10px;
-    color: #ffff;
+    color: #ffffff;
     cursor: pointer;
     font-weight: bold;
+}
+
+.fichaProfessor button:hover {
+    background-color: #ffffff;
+    color: #ff6600;
+    border: 3px #ff6600 solid;
+    transition: 0.3s;
 }
