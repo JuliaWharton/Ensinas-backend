@@ -1,7 +1,7 @@
 from django import forms
 from app.models import Estudante, Mentor
 
-class EstudanteLoginForm(forms.ModelForm):
+class EstudanteLoginForm(forms.Form):
     prefix = "login-estudante"
 
     email = forms.EmailField(label="E-mail")
