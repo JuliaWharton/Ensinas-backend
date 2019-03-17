@@ -4,28 +4,14 @@ from app.models import Estudante, Mentor
 class EstudanteLoginForm(forms.ModelForm):
     prefix = "login-estudante"
 
-    class Meta:
-        model = Estudante
-        fields = [
-            'email',
-            'senha'
-        ]
-        widgets = {
-            'senha': forms.PasswordInput
-        }
+    email = forms.EmailField(label="E-mail")
+    senha = forms.CharField(label="Senha", widget=forms.PasswordInput)
 
-class MentorLoginForm(forms.ModelForm):
+class MentorLoginForm(forms.Form):
     prefix = "login-mentor"
 
-    class Meta:
-        model = Mentor
-        fields = [
-            'email',
-            'senha'
-        ]
-        widgets = {
-            'senha': forms.PasswordInput
-        }
+    email = forms.EmailField(label="E-mail")
+    senha = forms.CharField(label="Senha", widget=forms.PasswordInput)
 
 class EstudanteCadastroForm(forms.ModelForm):
     prefix = "cadastro-estudante"
