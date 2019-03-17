@@ -49,5 +49,6 @@ def login(request):
 
 def logout(request):
 	estudante_auth.logout(request)
+	mentor_auth.logout(request)
 
 	return redirect('app_auth_login')
