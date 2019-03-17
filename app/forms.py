@@ -59,6 +59,7 @@ class MentorCadastroForm(forms.ModelForm):
         model = Mentor
         fields = [
             'nome',
+            'materia',
             'email',
             'senha',
         ]

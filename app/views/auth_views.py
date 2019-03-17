@@ -9,15 +9,27 @@ def cadastro(request):
 		form_estudante = forms.EstudanteCadastroForm(request.POST)
 
 		if form_estudante.is_valid():
-			form_estudante.senha = make_password(form_estudante.cleaned_data['senha'])
+			form_estudante.instance.senha = make_password(form_estudante.cleaned_data['senha'])
 			estudante = form_estudante.save()
-			estudante_auth.initSession(request, estudante)		
+			estudante_auth.init_session(request, estudante)		
 
-			return redirect('app_estudante_welcome')	
+			return redirect('app_estudante_home')	
 	else:
 		form_estudante = forms.EstudanteCadastroForm()
 
-	form_mentor = forms.MentorCadastroForm()
+	if request.POST.get('do', '') == 'cadastro_mentor':
+		form_mentor = forms.MentorCadastroForm(request.POST)
+
+		if form_mentor.is_valid():
+			form_mentor.instance.senha = make_password(form_mentor.cleaned_data['senha'])
+			form_mentor.instance.curso = ""
+			form_mentor.instance.instituicao = ""
+			mentor = form_mentor.save()
+			mentor_auth.init_session(request, mentor)		
+
+			return redirect('app_mentor_home')	
+	else:
+		form_mentor = forms.MentorCadastroForm()
 
 	return render(request, 'auth_cadastro.html', {
 			'form_estudante': form_estudante,

@@ -18,6 +18,12 @@ input {
     padding: 5px 10px;
 }
 
+select {
+    width: 350px;
+    height: 35px;
+    border-radius: 10px;
+}
+
 input:focus {
     outline: none;
 }

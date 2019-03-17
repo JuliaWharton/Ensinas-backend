@@ -5,6 +5,9 @@ def logout(request):
     if request.session.get('mentor_id') is not None:
         del request.session['mentor_id']
 
+def init_session(request, mentor):
+    request.session['mentor_id'] = mentor.id
+
 def get(request):
     if request.session.get('mentor_id') is not None:
         id = request.session.get('mentor_id')
@@ -21,7 +24,7 @@ def login(request, email, senha):
         mentor = Mentor.objects.get(email=email)
 
         if(check_password(senha, mentor.senha)):
-            request.session['mentor_id'] = mentor.id
+            init_session(request, mentor)
             return True
     except Mentor.DoesNotExist:
         pass
