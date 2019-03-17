@@ -6,25 +6,24 @@
 <link defer rel="stylesheet" href="{% static 'style/footer.css' %}">
 <link defer rel="stylesheet" href="{% static 'style/landing.css' %}">
 <link defer rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-crossorigin="anonymous">
+    crossorigin="anonymous">
 
 <title>Ensinas - Estudantes, ajudando estudantes.</title>
 {%endblock %}
 
 {% block content %}
 
-<div class="main">
+<header class="main">
     <div class="mainShadow">
         <nav class="flex">
             {% include 'nav.html' %}
         </nav>
-        
+
         <div class="mainInside flex">
-            <h1>DESCUBRA NOVOS HORIZONTES</h1>
+            <h2>Descubra novos Horizontes</h2>
             <h4>Seu estudo, Seu tempo</h4>
             <div class="boxMaterias flex">
                 <div class="materiasSection flex">
-                    
                     <div class="materiasButton flex">
                         <img src="{%static 'img/matematica.png'%}" alt="">
                         <p> Matemática </p>
@@ -55,71 +54,63 @@ crossorigin="anonymous">
             </div>
         </div>
     </div>
-</div>
-<div class="sectionOneBox flex">
+</header>
+<section id="icones">
     <div class="maxW">
-        <div class="sectionOne flex">
-            <div class="sectionOneIcons flex">
-                <span class="icons flex"><i class="fas fa-thumbs-up"></i></span>
-                <h3>Feito pra você</h3>
-                <p>De estudante pra estudante</p>
-            </div>
-            <div class="sectionOneIcons flex">
-                <span class="icons flex"><i class="fas fa-user-ninja"></i></span>
-                <h3>Feito pra você</h3>
-                <p>De estudante pra estudante</p>
-            </div>
-            <div class="sectionOneIcons flex">
-                <span class="icons flex"><i class="fas fa-lightbulb"></i></span>
-                <h3>Feito pra você</h3>
-                <p>De estudante pra estudante</p>
-            </div>
+        <div class="iconBox">
+            <span class="icons flex"><i class="fas fa-thumbs-up"></i></span>
+            <h3>Feito pra você</h3>
+            <p>De estudante pra estudante</p>
+        </div>
+        <div class="iconBox">
+            <span class="icons flex"><i class="fas fa-user-ninja"></i></span>
+            <h3>Feito pra você</h3>
+            <p>De estudante pra estudante</p>
+        </div>
+        <div class="iconBox">
+            <span class="icons flex"><i class="fas fa-lightbulb"></i></span>
+            <h3>Feito pra você</h3>
+            <p>De estudante pra estudante</p>
         </div>
     </div>
-</div>
+</section>
 
-<div class="sectionTwoBox flex">
+<section id="sobre">
+    <h2>Sobre nós</h2>
+    <div class="sectionTwoText flex">
+        <p>Nossa plataforma oferece oportunidade para estudantes que buscam ajuda e universitários que tem
+            conhecimento
+            a oferecer. Com horários flexíveis aos mentores e preços acessíveis aos estudantes, queremos
+            possibilitar o
+            contato entre aqueles que buscam conhecimento e aqueles que querem compartilhar o que possuem.</p>
+    </div>
+    </div>
+</section>
+
+<section id="universitarios">
     <div class="maxW">
-        <div class="sectionTwo">
-            <div class="sectionTwoAll">
-                <h1>Sobre nós</h1>
-                <div class="sectionTwoText flex">
-                    <p>Nossa plataforma oferece oportunidade para estudantes que buscam ajuda e universitários que tem conhecimento a oferecer. Com horários flexíveis aos mentores e preços acessíveis aos estudantes, queremos possibilitar o contato entre aqueles que buscam conhecimento e aqueles que querem compartilhar o que possuem.</p>
-                    </div>
-                </div>
-            </div>
+        <h2>Para universitários</h2>
+        <p>Oferecemos uma oportunidade de trabalhar dentro da sua própria disponíbilidade e de seu conhecimento.
+            Entre
+            em contato com estudantes que buscam ajuda e podem aproveitar o que você tem a oferecer e coloque em
+            prática o que aprendeu na faculdade.</p>
+    </div>
+</section>
+
+<section id="estudantes">
+    <div class="maxW">
+        <h2>Para estudantes</h2>
+        <div class="sectionTwoText flex">
+            <p>Se você busca ajuda, entre em contato com nossos mentores para uma aula descontraída e focada em
+                suas dúvidas. Procure pessoas com habilidades específicas que podem te ensinar, por um preço
+                acessível. Aproveite a oportunidade de entrar em contato com outros estudantes que podem
+                compartilhar conhecimento e experiências.</p>
         </div>
     </div>
-    
-    <div class="sectionTwo flex">
-        <div class="maxW">
-            <div class="sectionTwo sectionThree">
-                <div class="sectionTwoAll">
-                    <h1>Para universitários.</h1>
-                    <div class="sectionTwoText flex">
-                        <p>Oferecemos uma oportunidade de trabalhar dentro da sua própria disponíbilidade e de seu conhecimento.  Entre em contato com estudantes que buscam ajuda e podem aproveitar o que você tem a oferecer e coloque em prática o que aprendeu na faculdade.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="sectiontwo flex">
-            <div class="maxW">
-                <div class="sectionTwo sectionFour">
-                    <div class="sectionTwoAll">
-                        <h1>Para estudantes</h1>
-                        <div class="sectionTwoText flex">
-                            <p>Se você busca ajuda, entre em contato com nossos mentores para uma aula descontraída e focada em suas dúvidas. Procure pessoas com habilidades específicas que podem te ensinar, por um preço acessível. Aproveite a oportunidade de entrar em contato com outros estudantes que podem compartilhar conhecimento e experiências.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <footer class="">
-                {% include 'footer.html' %}
-            </footer>
-            
-            
-            {%endblock%}
+</section>
+
+<footer>
+    {% include 'footer.html' %}
+</footer>
+
+{%endblock%}

@@ -21,10 +21,11 @@ nav {
     font-family: 'Karla';
 }
 
-.mainInside h1 {
+.mainInside h2 {
     color: white;
     font-size: 3rem;
     font-weight: bolder;
+    text-transform: uppercase;
 }
 
 .mainInside h4 {
@@ -99,32 +100,64 @@ nav {
     color: white;
 }
 
-.sectionOneBox {
+section {
+    font-family: 'Karla', 'sans-serif';
+    height: 300px;
+    padding-top: 20px;
     width: 100%;
 }
 
-.sectionOne {
-    background-color: white;
-    height: 300px;
-    justify-content: space-around;
+section:nth-of-type(odd) {
+    background-color: #ffffff;
 }
 
-.sectionOneIcons {
-    font-size: 3rem;
+section:nth-of-type(even) {
+    background-color: lightgray;
+}
+
+section div {
+    display: flex;
     flex-direction: column;
 }
 
+section h2 {
+    font-weight: bold;
+    padding-top: 100px;
+    font-size: 3.2rem;
+    padding: 20px 0px 0px 30px;
+}
 
-.sectionOne .icons:hover {
+section p {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    width: 80%;
+    align-self: center;
+}
+
+#icones>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.iconBox {
+    font-size: 3rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconBox .icons:hover {
     cursor: pointer;
     background-color: #FF6600;
 }
 
-.sectionOneIcons .icons:hover {
+.iconBox .icons:hover {
     color: white;
 }
 
-.sectionOneIcons .icons {
+.iconBox .icons {
     width: 100px;
     height: 100px;
     transition: all 0.3s;
@@ -133,42 +166,13 @@ nav {
     margin-bottom: 5px;
 }
 
-.sectionOneIcons h3 {
+.iconBox h3 {
     margin-top: 5px;
     font-size: 1.6rem;
     font-weight: bolder;
 }
 
-.sectionOneIcons p {
+.iconBox p {
     font-size: 1.1rem;
-}
-
-.sectionTwoBox {
-    font-family: 'Karla', 'sans-serif'
-}
-
-.sectionTwo {
-    background-color: lightgray;
-    height: 300px;
-}
-
-.sectionTwoAll {
-    padding-top: 20px;
-}
-
-.sectionTwo h1 {
-    font-weight: bold;
-    padding-top: 100px;
-    font-size: 3.2rem;
-    padding: 20px 0px 0px 30px;
-}
-
-.sectionTwoText p {
-    font-size: 1.4rem;
-    margin-top: 20px;
-    width: 80%;
-}
-
-.sectionThree {
-    background-color: white;
+    width: 100%;
 }
