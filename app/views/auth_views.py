@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password, check_password
-from app.models import Contato, Estudante, Materia, Mentor
+from app.models import Estudante, Mentor
 from app.auth import estudante_auth, mentor_auth
 from app import forms
 

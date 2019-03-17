@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password, check_password
-from app.models import Contato, Estudante, Materia, Mentor
+from app.models import Estudante, Materia, Mentor, Solicitacao
 from app.auth import estudante_auth
 
 def home(request):
@@ -38,7 +38,7 @@ def contato(request, id_mentor, id_materia):
 		try:
 			mentor = Mentor.objects.get(pk=id_mentor)
 
-			contato = Contato.objects.filter(mentor=mentor,estudante=estudante).get_or_create(mentor=mentor, estudante=estudante, oculto=False)
+			solicitacao = Solicitacao.objects.filter(mentor=mentor,estudante=estudante).get_or_create(mentor=mentor, estudante=estudante, oculto=False)
 		except Mentor.DoesNotExist:
 			pass
 

@@ -27,7 +27,7 @@ class Mentor(models.Model):
     materia = models.ForeignKey(Materia, on_delete=models.SET_DEFAULT, default=None, verbose_name="Matéria")
     curso = models.CharField(max_length=256, default=None)
     instituicao = models.CharField(max_length=256, default=None, verbose_name="Instituição")
-    estudantes = models.ManyToManyField(Estudante, through='Contato')
+    estudantes = models.ManyToManyField(Estudante, through='Solicitacao')
 
     def __str__(self):
         return f'{self.nome} ({self.email})'
@@ -35,10 +35,14 @@ class Mentor(models.Model):
     class Meta:
         verbose_name_plural = "Mentores"
 
-class Contato(models.Model):
+class Solicitacao(models.Model):
     mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE)
     estudante = models.ForeignKey(Estudante, on_delete=models.CASCADE)
     oculto = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.estudante} - {self.mentor}'
+
+    class Meta:
+        verbose_name = "Solicitação"
+        verbose_name_plural = "Solicitações"
