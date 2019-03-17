@@ -9,4 +9,5 @@ urlpatterns = [
     path('estudante/materia/<int:id_materia>', estudante_views.materia, name='app_estudante_materia'),
     path('estudante/contato/<int:id_mentor>/<int:id_materia>/', estudante_views.contato, name='app_estudante_contato'),
     path('mentor/home', mentor_views.home, name='app_mentor_home'),
+    path('mentor/solicitacoes', mentor_views.solicitacoes, name='app_mentor_solicitacoes')
 ]

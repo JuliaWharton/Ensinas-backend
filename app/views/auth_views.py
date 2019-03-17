@@ -28,11 +28,17 @@ def login(request):
 	else:
 		form_estudante = forms.EstudanteLoginForm()
 					
-	if request.POST.get("do", '') == "login_mentor":
+	if request.POST.get('do', '') == 'login_mentor':
 		form_mentor = forms.MentorLoginForm(request.POST)
 
 		if form_mentor.is_valid():
-			return None
+			email = form_mentor.cleaned_data['email']
+			senha = form_mentor.cleaned_data['senha']
+
+			if mentor_auth.login(request, email, senha):
+				return redirect('app_mentor_home')
+			else:
+				form_mentor.add_error('email', 'E-mail e/ou senha inválidos.')
 	else:
 		form_mentor = forms.MentorLoginForm()
 

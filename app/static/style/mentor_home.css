@@ -15,7 +15,6 @@ body {
     height: 100%;
 
     display: grid;
-    background-color: rgb(58, 70, 255);
 
     grid-template-areas: 'nav-logo nav'
         'aside content';
@@ -49,15 +48,14 @@ nav>ul li {
     font-size: 1.25em;
 }
 
-nav li {
+nav li{
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-    height: 100%;
-    padding: 0 15px;
-
-    cursor: pointer;
+nav h2{
+    padding: 0 25px;
 }
 
 nav li:hover {
@@ -66,7 +64,14 @@ nav li:hover {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 15px;
+    height: 100%;
 }
 
 #nav-perfil {
@@ -82,7 +87,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #dd5500;
+    background-color: #0d0d0d;
 }
 
 #nav-logo img {
@@ -92,9 +97,12 @@ nav a {
 }
 
 #nav-logo h1 {
-    color: white;
-    font-size: 2.5em;
-    text-transform: uppercase
+    color: #ffffff;
+    font-size: 32pt;
+}
+
+#nav-logo h1 span {
+    color: #ff6600;
 }
 
 aside {
@@ -108,37 +116,39 @@ aside {
 }
 
 aside>img {
-    height: 250px;
-    width: 250px;
+    height: auto;
+    width: 220px;
     border-radius: 50%;
-    border: 5px solid #ffffff;
+    border: 3px solid #ffffff;
 }
 
 aside ul {
-    color: white;
-    font-size: 1.5em;
+    color: #ffffff;
+    font-size: 15pt;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
     width: 280px;
-    height: 130px;
+    height: 230px;
     padding: 0;
     list-style: none;
 }
 
 aside h2 {
     text-align: center;
-    font-size: 1.75em;
+    font-size: 25pt;
 }
 
 aside li {
     width: 100%;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 aside li i {
@@ -147,19 +157,21 @@ aside li i {
 
 aside button {
     border: none;
-    color: white;
+    color: #ffffff;
     background-color: #dd5500;
     font-weight: bolder;
     font-size: 1.25em;
     border-radius: 10px;
     padding: 15px;
     cursor: pointer;
+
+    display: none;
 }
 
 #content {
     grid-area: content;
 
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .alunos {
@@ -215,7 +227,7 @@ aside button {
 
 .aluno button {
     height: 50px;
-    color: white;
+    color: #ffffff;
     border: none;
     background-color: #ff6600;
     font-size: 1.2em;
