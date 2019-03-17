@@ -1,0 +1,1 @@
+web: gunicorn ensinas.wsgi
