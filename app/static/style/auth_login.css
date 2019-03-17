@@ -68,7 +68,7 @@ button:hover {
     transition: 1s;
 }
 
-#logo img:hover{
+#logo img:hover {
     transform: rotate(360deg);
     transition: 1s;
 }
@@ -126,4 +126,10 @@ form {
 form p {
     width: 350px;
     font-size: 16pt;
+}
+
+form ul {
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }

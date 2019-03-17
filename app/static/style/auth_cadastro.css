@@ -60,6 +60,12 @@ form p {
     font-size: 16pt;
 }
 
+form ul {
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 form button {
     background-color: #ffffff;
     border-radius: 5px;
@@ -92,7 +98,7 @@ form button:hover {
     transition: 1s;
 }
 
-#logo img:hover{
+#logo img:hover {
     transform: rotate(360deg);
     transition: 1s;
 }
