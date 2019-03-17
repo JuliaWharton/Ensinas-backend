@@ -6,14 +6,18 @@
 
 body {
     background-color: #0d0d0d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 p {
-    color: white;
+    color: #ffffff;
 }
 
 button {
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 5px;
     color: #ff6600;
     cursor: pointer;
@@ -34,15 +38,9 @@ button:hover {
 
 #main {
     display: grid;
-    grid-template-areas:
-        '. . . . .'
-        '. login1 logo login2 .'
-        '. . . . .';
-    grid-template-columns: 1fr 380px 400px 380px 1fr;
-    grid-template-rows: 1fr 420px 1fr;
-
-    min-height: 100%;
-    width: 100%;
+    grid-template-areas: 'login1 logo login2';
+    grid-template-columns: 400px 420px 400px;
+    grid-template-rows: 420px;
 }
 
 #main .login:nth-child(1) {
@@ -69,7 +67,7 @@ button:hover {
 
 #logo h1 {
     font-size: 80px;
-    color: white;
+    color: #ffffff;
     margin: 20px 0;
 }
 
@@ -81,7 +79,7 @@ button:hover {
     font-size: 18pt;
 }
 
-#logo p:nth-of-type(1){
+#logo p:nth-of-type(1) {
     text-transform: uppercase;
     font-weight: bolder;
 }
@@ -106,7 +104,7 @@ button:hover {
 
 .login-texto h2 {
     font-size: 50pt;
-    color: white;
+    color: #ffffff;
 }
 
 form {
@@ -117,7 +115,7 @@ form {
     height: 250px;
 }
 
-form p{
+form p {
     width: 350px;
     font-size: 16pt;
 }

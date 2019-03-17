@@ -1,20 +1,20 @@
 body {
-    background-color: #0d0d0d
+    background-color: #0d0d0d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 p {
-    color: white;
+    color: #ffffff;
 }
 
 #main {
     display: grid;
-    grid-template-areas: '. . . . .'
-        '. cadastro1 logo cadastro2 .'
-        '. . . . .';
-    grid-template-columns: 1fr 400px 400px 400px 1fr;
-    grid-template-rows: 1fr 550px 1fr;
-
-    height: 100%;
+    grid-template-areas: 'cadastro1 logo cadastro2';
+    grid-template-columns: 400px 420px 400px;
+    grid-template-rows: 550px;
 }
 
 #main .cadastro:nth-child(1) {
@@ -44,7 +44,7 @@ p {
 
 .cadastro-texto h2 {
     font-size: 50pt;
-    color: white;
+    color: #ffffff;
 }
 
 form {
@@ -55,13 +55,13 @@ form {
     height: 350px;
 }
 
-form p{
+form p {
     width: 350px;
     font-size: 16pt;
 }
 
 form button {
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 5px;
     color: #ff6600;
     cursor: pointer;
@@ -95,7 +95,7 @@ form button:hover {
 
 #logo h1 {
     font-size: 80px;
-    color: white;
+    color: #ffffff;
     margin: 20px 0;
 }
 
@@ -103,7 +103,7 @@ form button:hover {
     font-size: 18pt;
 }
 
-#logo p:nth-of-type(1){
+#logo p:nth-of-type(1) {
     text-transform: uppercase;
     font-weight: bolder;
 }
