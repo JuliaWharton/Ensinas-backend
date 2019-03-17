@@ -33,6 +33,8 @@ button:focus {
 
 button:hover {
     box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.24), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    background-color: #dd5500;
+    color: #ffffff;
     transition: 0.3s;
 }
 
@@ -63,6 +65,12 @@ button:hover {
 #logo img {
     height: auto;
     width: 50%;
+    transition: 1s;
+}
+
+#logo img:hover{
+    transform: rotate(360deg);
+    transition: 1s;
 }
 
 #logo h1 {
