@@ -5,6 +5,9 @@ def logout(request):
     if request.session.get("estudante_id") is not None:
         del request.session["estudante_id"]
 
+def initSession(request, estudante):
+	request.session["estudante_id"] = estudante.id
+
 def get(request):
     if request.session.get("estudante_id") is not None:
         id = request.session.get("estudante_id")
@@ -17,13 +20,15 @@ def get(request):
     return None
     
 def login(request, email, senha):
-    try:
-        estudante = Estudante.objects.get(email=email)
+	try:
+		estudante = Estudante.objects.get(email=email)
 
-        if(check_password(senha, estudante.senha)):
-            request.session["estudante_id"] = estudante.id
-            return True
-    except Estudante.DoesNotExist:
-            pass
+		if(check_password(senha, estudante.senha)):
+			initSession(request, estudante)
+			return True
+	except Estudante.DoesNotExist:
+			pass
 
-    return False
+	return False
+
+  

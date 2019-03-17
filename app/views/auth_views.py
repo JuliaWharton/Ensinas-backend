@@ -5,13 +5,24 @@ from app.auth import estudante_auth, mentor_auth
 from app import forms
 
 def cadastro(request):
-    form_estudante = forms.EstudanteCadastroForm()
-    form_mentor = forms.MentorCadastroForm()
+	if request.POST.get('do', '') == 'cadastro_estudante':
+		form_estudante = forms.EstudanteCadastroForm(request.POST)
 
-    return render(request, 'auth_cadastro.html', {
-            'form_estudante': form_estudante,
-            'form_mentor': form_mentor
-    })
+		if form_estudante.is_valid():
+			form_estudante.senha = make_password(form_estudante.cleaned_data['senha'])
+			estudante = form_estudante.save()
+			estudante_auth.initSession(request, estudante)		
+
+			return redirect('app_estudante_welcome')	
+	else:
+		form_estudante = forms.EstudanteCadastroForm()
+
+	form_mentor = forms.MentorCadastroForm()
+
+	return render(request, 'auth_cadastro.html', {
+			'form_estudante': form_estudante,
+			'form_mentor': form_mentor
+	})
 
 def login(request):
 	if request.POST.get("do", '') == "login_estudante":

@@ -42,6 +42,15 @@ class EstudanteCadastroForm(forms.ModelForm):
             'senha': forms.PasswordInput
         }
 
+    def clean_senha_confirma(self):
+        senha = self.cleaned_data["senha"]
+        senha_confirma = self.cleaned_data["senha_confirma"]
+        
+        if senha != senha_confirma:
+            raise forms.ValidationError("As senhas não coicidem.")
+
+        return senha
+
 class MentorCadastroForm(forms.ModelForm):
     prefix = "cadastro-mentor"
     senha_confirma = forms.CharField(label="Confirme a Senha", widget=forms.PasswordInput)
@@ -56,3 +65,12 @@ class MentorCadastroForm(forms.ModelForm):
         widgets = {
             'senha': forms.PasswordInput
         }
+    
+    def clean_senha_confirma(self):
+        senha = self.cleaned_data["senha"]
+        senha_confirma = self.cleaned_data["senha_confirma"]
+        
+        if senha != senha_confirma:
+            raise forms.ValidationError("As senhas não coicidem.")
+
+        return senha

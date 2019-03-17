@@ -25,9 +25,10 @@
                 <p>Cadastre-se!</p>
             </div>
 
-            <form>
+            <form method="POST">
                 {% csrf_token %}
                 {{form_estudante.as_p}}
+                <input type="hidden" value="cadastro_estudante" name="do">
                 <button>Cadastre-se</button>
             </form>
         </div>
