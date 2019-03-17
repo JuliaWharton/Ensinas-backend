@@ -31,6 +31,8 @@ def materia(request, id_materia):
 			"estudante": estudante
 			})
 	else:
+		sweetify.error(request, 'Acesso restrito!', text='Você precisa estar autenticado para acessar esta página.', button='Ok', timer=5000)
+		
 		return redirect('app_auth_login')
 
 def contato(request, id_mentor, id_materia):
@@ -42,8 +44,11 @@ def contato(request, id_mentor, id_materia):
 
 			solicitacao = Solicitacao.objects.filter(mentor=mentor,estudante=estudante).get_or_create(mentor=mentor, estudante=estudante, oculto=False)
 
-			sweetify.success(request, 'Tudo certo!', text='Solicitação de contato enviada para o mentor! Favor aguardar que o mentor entrará em contato.',button='Ok', timer=3000)
+			sweetify.success(request, 'Tudo certo!', text='Solicitação de contato enviada para o mentor! Favor aguardar que o mentor entrará em contato.', button='Ok', timer=5000)
 		except Mentor.DoesNotExist:
 			pass
+		return redirect('app_estudante_materia', id_materia)
+	else:
+		sweetify.error(request, 'Acesso restrito!', text='Você precisa estar autenticado para acessar esta página.', button='Ok', timer=5000)
 
-	return redirect('app_estudante_materia', id_materia)
+		return redirect('app_auth_login')

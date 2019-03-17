@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{% static 'style/main.css' %}">
     <link rel="stylesheet" href="{%static 'style/auth_login.css' %}">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
+
     <title>Ensinas - Login</title>
 </head>
 
@@ -26,7 +28,7 @@
                 {% csrf_token %}
                 {{form_estudante.as_p}}
                 <input type="hidden" value="login_estudante" name="do">
-                
+
                 <button>Entrar</button>
             </form>
         </div>
@@ -53,6 +55,9 @@
             </form>
         </div>
     </div>
+
+    {% load sweetify %}
+    {% sweetify %}
 </body>
 
 </html>

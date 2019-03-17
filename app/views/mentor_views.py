@@ -15,4 +15,7 @@ def solicitacoes(request):
 			'mentor': mentor,
 			'solicitacoes': solicitacoes
 		})
-	return redirect('app_auth_login')
+
+	else:
+		sweetify.error(request, 'Acesso restrito!', text='Você precisa estar autenticado para acessar esta página.', button='Ok', timer=5000)
+		return redirect('app_auth_login')
