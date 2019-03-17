@@ -36,7 +36,7 @@
         <p>Qual matéria tá difícil?</p>
         <div>
             {% for materia in materias%}
-                {% if materia_atual and materia.id == materia_atual.id %}
+                {% if materia.id == materia_atual %}
                     <button class="atual">{{materia.nome}}</button>
                 {% else %}
                     <a href="{% url 'app_estudante_materia' materia.id %}"><button>{{materia.nome}}</button></a>
@@ -55,11 +55,7 @@
                     <p>{{mentor.curso}}</p>
                     <p>{{mentor.instituicao}}</p>
                 </div>
-                {% if materia_atual %}
-                    <a href="{% url 'app_estudante_contato_materia' mentor.id materia_atual.id%}"><button>Quero ajuda!</button></a>
-                {% else %}
-                <a href="{% url 'app_estudante_contato' mentor.id%}"><button>Quero ajuda!</button></a>
-                {% endif %}
+                <a href="{% url 'app_estudante_contato' mentor.id materia_atual %}"><button>Quero ajuda!</button></a>
             </div>
             {% endfor %}
         {% else %}

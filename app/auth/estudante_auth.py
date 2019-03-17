@@ -3,10 +3,9 @@ from app.models import Estudante
 
 def logout(request):
     del request.session["estudante_id"]
-    del request.session["mentor_id"]
     request.session.modified = True
 
-def estudante_get(request):
+def get(request):
     if request.session.get("estudante_id") is not None:
         id = request.session.get("estudante_id")
         if isinstance(id, int):
@@ -18,9 +17,8 @@ def estudante_get(request):
                 pass
 
     return None
-
-
-def estudante_login(request, email, senha):
+    
+def login(request, email, senha):
     try:
         estudante = Estudante.objects.get(email=email)
 
