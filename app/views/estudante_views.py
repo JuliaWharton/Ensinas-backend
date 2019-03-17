@@ -31,14 +31,14 @@ def materia(request, id_materia):
 	else:
 		return redirect('app_auth_login')
 
-def contato(request, id_materia, id_mentor):
+def contato(request, id_mentor, id_materia):
 	estudante = estudante_auth.get(request)
 
 	if estudante is not None:
 		try:
 			mentor = Mentor.objects.get(pk=id_mentor)
 
-			contato = Contato.objects.filter(mentor=mentor,estudante=estudante).get_or_create(oculto=False)
+			contato = Contato.objects.filter(mentor=mentor,estudante=estudante).get_or_create(mentor=mentor, estudante=estudante, oculto=False)
 		except Mentor.DoesNotExist:
 			pass
 
