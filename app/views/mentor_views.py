@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+import sweetify
+
 from app.models import Estudante, Materia, Mentor, Solicitacao
 from app.auth import mentor_auth
 
@@ -17,8 +19,8 @@ def solicitacoes(request):
 				'solicitacoes': solicitacoes
 			})
 		else:
-			sweetify.error(request, 'Acesso restrito!', text='Seu cadastro ainda não foi aprovado! Por favor aguarde o contato da nossa equipe!', button='Ok', timer=5000)
+			sweetify.error(request, 'Acesso restrito!', text='Seu cadastro ainda não foi aprovado! Por favor aguarde o contato da nossa equipe!', persistent=True)
 			return redirect('app_auth_login')
 	else:
-		sweetify.error(request, 'Acesso restrito!', text='Você precisa estar autenticado para acessar esta página.', button='Ok', timer=5000)
+		sweetify.error(request, 'Acesso restrito!', text='Você precisa estar autenticado para acessar esta página.', button='Ok', timer=3000)
 		return redirect('app_auth_login')

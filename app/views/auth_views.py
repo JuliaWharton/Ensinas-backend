@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password, check_password
+import sweetify
+
 from app.models import Estudante, Mentor
 from app.auth import estudante_auth, mentor_auth
 from app import forms
-import sweetify
 
 def cadastro(request):
 	if request.POST.get('do', '') == 'cadastro_estudante':
@@ -14,7 +15,7 @@ def cadastro(request):
 			estudante = form_estudante.save()
 			estudante_auth.init_session(request, estudante)		
 
-			sweetify.success(request, 'Cadastro concluido!', text='Seu cadastro foi concluido! Agora basta procurar e encontrar um mentor ideal para você. Caso deseje entrar em contato com algum, basta clicar no botão e iremos solicitar o contato!', button='Ok')
+			sweetify.success(request, 'Cadastro concluido!', text='Seu cadastro foi concluido! Agora basta procurar e encontrar um mentor ideal para você. Caso deseje entrar em contato com algum, basta clicar no botão e iremos solicitar o contato!', persistent=True)
 
 			return redirect('app_estudante_home')	
 	else:
@@ -30,7 +31,7 @@ def cadastro(request):
 			mentor = form_mentor.save()
 			mentor_auth.init_session(request, mentor)		
 
-			sweetify.success(request, 'Cadastro concluido!', text='Seu cadastro foi concluido! Agora basta aguardar que nossa equipe irá entrar em contato para analisar e aprovar seu cadastro!', button='Ok')
+			sweetify.success(request, 'Cadastro concluido!', text='Seu cadastro foi concluido! Agora basta aguardar que nossa equipe irá entrar em contato para analisar e aprovar seu cadastro!', persistent=True)
 
 			return redirect('app_auth_login')	
 	else:

@@ -31,7 +31,7 @@ def materia(request, id_materia):
 			"estudante": estudante
 			})
 	else:
-		sweetify.error(request, 'Acesso restrito!', text='Você precisa estar autenticado para acessar esta página.', button='Ok', timer=5000)
+		sweetify.error(request, 'Acesso restrito!', text='Você precisa estar autenticado para acessar esta página.', button='Ok', timer=3000)
 		
 		return redirect('app_auth_login')
 
@@ -49,6 +49,6 @@ def contato(request, id_mentor, id_materia):
 			pass
 		return redirect('app_estudante_materia', id_materia)
 	else:
-		sweetify.error(request, 'Acesso restrito!', text='Você precisa estar autenticado para acessar esta página.', button='Ok', timer=5000)
+		sweetify.error(request, 'Acesso restrito!', text='Você precisa estar autenticado para acessar esta página.', button='Ok', timer=3000)
 
 		return redirect('app_auth_login')
