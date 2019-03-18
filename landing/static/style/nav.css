@@ -78,3 +78,6 @@ nav {
     cursor: pointer;
     background-color: rgb(253, 121, 32);
 }
+.navRight a:hover{
+    text-decoration: none;
+}
