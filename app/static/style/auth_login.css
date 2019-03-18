@@ -12,10 +12,6 @@ body {
     justify-content: center;
 }
 
-p {
-    color: #ffffff;
-}
-
 button {
     background-color: #ffffff;
     border-radius: 5px;
@@ -43,6 +39,10 @@ button:hover {
     grid-template-areas: 'login1 logo login2';
     grid-template-columns: 400px 420px 400px;
     grid-template-rows: 420px;
+}
+
+#main p {
+    color: #ffffff;
 }
 
 #main .login:nth-child(1) {
