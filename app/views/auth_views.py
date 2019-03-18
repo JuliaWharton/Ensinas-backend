@@ -15,7 +15,7 @@ def cadastro(request):
 			estudante = form_estudante.save()
 			estudante_auth.init_session(request, estudante)		
 
-			sweetify.success(request, 'Cadastro concluido!', text='Seu cadastro foi concluido! Agora basta procurar e encontrar um mentor ideal para você. Caso deseje entrar em contato com algum, basta clicar no botão e iremos solicitar o contato!', persistent=True)
+			sweetify.success(request, 'Cadastro concluído!', html='<p>Seu cadastro foi concluído!</p><p>Agora basta procurar e encontrar um mentor ideal para você.</p><p>Caso deseje entrar em contato com algum, basta clicar no botão e iremos solicitar o contato!', persistent=True)
 
 			return redirect('app_estudante_home')	
 	else:
@@ -31,7 +31,7 @@ def cadastro(request):
 			mentor = form_mentor.save()
 			mentor_auth.init_session(request, mentor)		
 
-			sweetify.success(request, 'Cadastro concluido!', text='Seu cadastro foi concluido! Agora basta aguardar que nossa equipe irá entrar em contato para analisar e aprovar seu cadastro!', persistent=True)
+			sweetify.success(request, 'Cadastro concluído!', html='<p>Seu cadastro foi concluído!</p><p>Agora basta aguardar que nossa equipe irá entrar em contato para analisar e aprovar seu cadastro!</p>', persistent=True)
 
 			return redirect('app_auth_login')	
 	else:

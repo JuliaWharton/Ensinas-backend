@@ -53,8 +53,8 @@
                                 </p>
                             </div>
                             <div>
-                                <button class="contato">Entrar em contato</button>
-                                <button class="fechar">X</button>
+                                <a href="{% url 'app_mentor_contato' solicitacao.id %}"><button class="contato">Entrar em contato</button></a>
+                                <a href="{% url 'app_mentor_ocultar' solicitacao.id %}"><button class="fechar">X</button></a>
                             </div>
                         </li>
                     {% endfor %}

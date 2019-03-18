@@ -224,8 +224,8 @@ aside button {
     grid-area: contato;
 
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .aluno button {

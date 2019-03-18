@@ -44,7 +44,7 @@ def contato(request, id_mentor, id_materia):
 
 			solicitacao = Solicitacao.objects.filter(mentor=mentor,estudante=estudante).get_or_create(mentor=mentor, estudante=estudante, oculto=False)
 
-			sweetify.success(request, 'Tudo certo!', text='Solicitação de contato enviada para o mentor! Favor aguardar que o mentor entrará em contato.', button='Ok', timer=5000)
+			sweetify.success(request, 'Tudo certo!', html='<p>Solicitação de contato enviada para o mentor!</p><p>Favor aguardar que o mentor entrará em contato.</p>', button='Ok', timer=5000)
 		except Mentor.DoesNotExist:
 			pass
 		return redirect('app_estudante_materia', id_materia)
