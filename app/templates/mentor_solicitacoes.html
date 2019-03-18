@@ -10,9 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'style/mentor_home.css' %}">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
 
     <title>Ensinas - Mentor</title>
 </head>
@@ -26,9 +27,7 @@
         <nav>
             <div id="nav-perfil">
                 <ul>
-                    <li>
-                        <h2>{{mentor.nome}}</h2>
-                    </li>
+                    <li><h2>{{mentor.nome}}</h2></li>
                     <li><a href="{% url 'app_auth_logout' %}"><i class="fas fa-sign-out-alt"></i></a></li>
                 </ul>
             </div>
@@ -36,9 +35,7 @@
         <aside>
             <img src="{% static 'img/professor.png' %}" alt="">
             <ul>
-                <li>
-                    <h2>{{mentor.nome}}</h2>
-                </li>
+                <li><h2>{{mentor.nome}}</h2></li>
                 <li><i class="fas fa-briefcase"></i>{{mentor.materia.nome}}</li>
                 <li><i class="fas fa-university"></i>{{mentor.curso}} {{mentor.instituicao}}</li>
             </ul>
@@ -62,7 +59,6 @@
                         </li>
                     {% endfor %}
                 {% else %}
-
                 {% endif %}
             </ul>
         </section>

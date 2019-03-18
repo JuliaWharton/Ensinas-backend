@@ -10,7 +10,6 @@ nav {
 .navBox button {
     background: unset;
     border: unset;
-    font-family: 'Karla';
 }
 
 .navLeft {
@@ -48,7 +47,6 @@ nav {
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff;
-    font-family: 'Karla', sans-serif;
     font-weight: bold;
     padding: 0 8px;
 }
@@ -59,7 +57,6 @@ nav {
 
 .navRight button {
     color: white;
-    font-family: 'Karla';
     font-size: 1.2rem;
     font-weight: bolder;
     outline: none;
