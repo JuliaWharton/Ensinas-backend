@@ -1,4 +1,6 @@
-{% load staticfiles %}
+{% load static %}
+{% load sweetify %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,7 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'style/main.css' %}">
-    <link rel="stylesheet" href="{%static 'style/auth_login.css' %}">
+    <link rel="stylesheet" href="{% static 'style/auth_login.css' %}">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
 
@@ -34,8 +36,8 @@
         </div>
 
         <div id="logo">
-            <img src="{% static 'img/logo.png' %}" alt="">
-            <h1>Ensi<span>nas</span></h1>
+            <a href="{% url 'landing' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
+            <a href="{% url 'landing' %}"><h1>Ensi<span>nas</span></h1></a>
             <p>Descubra novos horizontes</p>
             <p>Seu estudo, seu tempo.</p>
         </div>
@@ -56,7 +58,6 @@
         </div>
     </div>
 
-    {% load sweetify %}
     {% sweetify %}
 </body>
 

@@ -92,6 +92,11 @@ form button:hover {
     text-align: center;
 }
 
+#logo a{
+    text-decoration: none;
+    outline: none;
+}
+
 #logo img {
     height: auto;
     width: 50%;

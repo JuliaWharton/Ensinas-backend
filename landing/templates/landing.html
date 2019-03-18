@@ -1,5 +1,6 @@
 {% extends 'template.html' %}
-{% load staticfiles %}
+
+{% load static %}
 
 {%block head %}
 <link defer rel="stylesheet" href="{% static 'style/nav.css' %}">
@@ -9,10 +10,9 @@
     crossorigin="anonymous">
 
 <title>Ensinas - Estudantes, ajudando estudantes.</title>
-{%endblock %}
+{% endblock %}
 
 {% block content %}
-
 <header class="main">
     <div class="mainShadow">
         <nav class="flex">
@@ -110,4 +110,4 @@
     {% include 'footer.html' %}
 </footer>
 
-{%endblock%}
+{% endblock %}
