@@ -16,7 +16,7 @@ def home(request):
 
 def materia(request, id_materia):
 	estudante = estudante_auth.get(request)
-	
+	print(estudante); 	
 	if estudante is not None:
 		materias = Materia.objects.all()
 		if id_materia is not 0:

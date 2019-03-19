@@ -20,10 +20,11 @@ def get(request):
     return None
 
 def login(request, email, senha):
+    mentor = Mentor.objects.get(email=email)
+    print(mentor.senha)
     try:
         mentor = Mentor.objects.get(email=email)
-
-        if(check_password(senha, mentor.senha)):
+        if(check_password(mentor.senha, senha)):
             init_session(request, mentor)
             return True
     except Mentor.DoesNotExist:

@@ -18,3 +18,11 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.flexC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+

@@ -15,11 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.min.js"></script>
 
     <title>Ensinas - Estudante</title>
+    
 </head>
 
 <body>
     <nav>
-        <div>
+        <div id="logo">
             <img src="{% static 'img/logo.png' %}" alt="Logo do site, imagem de um capelo e óculos.">
             <h1>Ensi<span>nas</span></h1>
         </div>
@@ -27,13 +28,13 @@
             <input placeholder="Buscar tópico" type="text">
             <button><i class="fas fa-search"></i></button>
         </div>
-        <div>
+        <div id="boxRight">
             <p>{{estudante.nome}}</p>
             <!--<span class="iconePerfil" id="icone1"><i class="fas fa-cog"></i></span>-->
-            <a href="{% url 'app_auth_logout' %}" class="iconePerfil"><span><i class="fas fa-sign-out-alt"></i></span></a>
+            <a href="{% url 'app_auth_logout' %}" class="iconePerfil" id="iconeLogout"><span><i class="fas fa-sign-out-alt"></i></span></a>
         </div>
     </nav>
-    <aside>
+    <aside id="aside">
         <p>Qual matéria tá difícil?</p>
         <div>
             {% for materia in materias%}
