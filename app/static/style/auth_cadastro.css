@@ -6,15 +6,15 @@ body {
     justify-content: center;
 }
 
-p {
-    color: #ffffff;
-}
-
 #main {
     display: grid;
     grid-template-areas: 'cadastro1 logo cadastro2';
     grid-template-columns: 400px 420px 400px;
     grid-template-rows: 580px;
+}
+
+#main p {
+    color: #ffffff;
 }
 
 #main .cadastro:nth-child(1) {
@@ -90,6 +90,11 @@ form button:hover {
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+#logo a{
+    text-decoration: none;
+    outline: none;
 }
 
 #logo img {

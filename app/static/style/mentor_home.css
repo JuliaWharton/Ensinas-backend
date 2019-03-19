@@ -217,15 +217,15 @@ aside button {
 }
 
 .aluno span {
-    color: #dd5500;
+    color: #000000;
 }
 
 .aluno div:nth-child(2) {
     grid-area: contato;
 
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .aluno button {
@@ -236,7 +236,14 @@ aside button {
     font-size: 1.1em;
     font-weight: bold;
     padding: 0 25px;
-    border-radius: 12px;
-    margin-left: 25px;
-    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.aluno button:hover {
+    background-color: #ffffff;
+    color: #ff6600;
+    border: 3px #ff6600 solid;
+    transition: 0.3s;
+    padding: 0 22px;
 }
